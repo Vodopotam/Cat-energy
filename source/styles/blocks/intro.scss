@@ -1,0 +1,68 @@
+.intro {
+  position: relative;
+  padding-top: 28px;
+
+  &__container {
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      text-align: left;
+      padding-left: 100px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+    }
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: $font-secondary;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+    color: $color-white;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 40px;
+      font-size: 60px;
+      line-height: 60px;
+      color: $color-black;
+    }
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+    grid-row: 2/ 3;
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: $font-secondary;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: $color-white;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 50px;
+      font-size: 20px;
+      line-height: 20px;
+      color: $color-black;
+    }
+  }
+
+  &__product {
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / -1;
+      grid-row: 3/ 5;
+    }
+  }
+
+  &__button {
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / -1;
+      grid-row: 3/ 4;
+    }
+  }
+}

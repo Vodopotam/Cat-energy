@@ -1,0 +1,46 @@
+.additional-products {
+  margin-bottom: 86px;
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 81px;
+    font-family: $font-secondary;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      @include title-border-left;
+    }
+
+    &::after {
+      @include title-border-right;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 250px;
+    gap: 80px;
+  }
+
+  &__list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-top: 1px solid $color-light-grey;
+  }
+
+  &__item {
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: auto 150px 50px 244px;
+    column-gap: 40px;
+    align-items: center;
+    border-bottom: 1px solid $color-light-grey;
+  }
+}

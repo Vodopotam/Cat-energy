@@ -1,0 +1,28 @@
+.promo {
+  position: relative;
+  min-height: 290px;
+  background-color: $color-basic;
+  background-image: url("../../images/promo_bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 185px 42px 42px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 82px;
+    background-image: url("../../icons/icon_gift.svg");
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-white;
+    line-height: 20px;
+    text-align: center;
+  }
+}

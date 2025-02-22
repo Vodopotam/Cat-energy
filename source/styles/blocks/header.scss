@@ -1,0 +1,32 @@
+.header {
+  color: #ffffff;
+
+  &__container {
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__bar {
+    padding-top: 12px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__toggler {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}

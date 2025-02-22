@@ -1,0 +1,12 @@
+.catalog-page {
+  padding-top: 188px;
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 84px;
+    font-family: $font-secondary;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

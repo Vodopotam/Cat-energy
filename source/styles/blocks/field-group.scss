@@ -1,0 +1,56 @@
+.field-group {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  &--has-border {
+    padding: 25px 28px;
+    border: 1px solid #e7e7e7;
+  }
+
+  &--cat-data {
+    row-gap: 20px;
+  }
+
+  &--target {
+    & .control {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &--contacts {
+    column-gap: 80px;
+  }
+
+  &--additional {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 104px;
+
+    & .control {
+      min-width: 221px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 76px;
+    position: relative;
+    font-family: $font-secondary;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      @include title-border-left;
+    }
+
+    &::after {
+      @include title-border-right;
+    }
+  }
+}

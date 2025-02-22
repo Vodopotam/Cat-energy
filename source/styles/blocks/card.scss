@@ -1,0 +1,74 @@
+.card {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "image image"
+    "title title"
+    "details details"
+    "button button";
+  padding: 160px 35px 40px 40px;
+  background-color: $color-very-light-grey;
+
+  &--show-all {
+    background-color: $color-white;
+    border: 2px solid $color-very-light-grey;
+    grid-template-areas:
+      ". ."
+      "title title"
+      "text text"
+      "text text"
+      "text text"
+      "button button";
+  }
+
+  &__title {
+    margin: 0;
+    grid-area: title;
+    font-family: $font-secondary;
+    font-size: 20px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-darker-grey;
+  }
+
+  &__text {
+    margin: 0;
+    grid-area: text;
+    line-height: 18px;
+    text-align: center;
+    color: $color-dark-grey;
+  }
+
+  &__img {
+    grid-area: image;
+  }
+
+  &__details {
+    margin-bottom: 33px;
+    grid-area: details;
+    gap: 16px;
+    line-height: 16px;
+    color: $color-dark-grey;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid $color-light-grey;
+  }
+
+  &__description {
+    margin: 0;
+    text-align: right;
+  }
+
+  &__button {
+    grid-area: button;
+    padding: 10px 35px;
+    font-size: 16px;
+    align-self: flex-end;
+  }
+}

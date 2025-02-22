@@ -1,0 +1,40 @@
+.form {
+  margin-bottom: 82px;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px 80px;
+  }
+
+  &__group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    &--half-width {
+      width: calc(100% / 2 - 40px);
+    }
+  }
+
+  &__label {
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content auto;
+
+    &--half-width {
+      width: 570px;
+    }
+  }
+
+  &__button {
+    min-width: 568px;
+    padding: 12px 26px;
+    border: none;
+    box-sizing: border-box;
+  }
+
+  &__note {
+    font-size: 16px;
+  }
+}

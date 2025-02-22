@@ -1,0 +1,43 @@
+/* здесь используйте глобальные переменные */
+
+// colors
+$color-basic: #68b738;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-error: #ff8282;
+$color-grey: #666666;
+$color-light-grey: #cdcdcd;
+$color-lighter-grey: #ebebeb;
+$color-very-light-grey: #f2f2f2;
+$color-dark-grey: #444444;
+$color-darker-grey: #222222;
+
+// font
+$font-secondary: "Oswald", san-serif;
+
+// Viewports
+$tablet-width: 768px;
+$desktop-width: 1280px;
+// $mobile-width-only: 767px;
+
+@mixin title-border-left {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: calc(100% + 40px);
+  width: 60%;
+  height: 2px;
+  background-color: $color-basic;
+  border-radius: 2px;
+}
+
+@mixin title-border-right {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: calc(100% + 40px);
+  width: 100vw;
+  height: 2px;
+  background-color: $color-basic;
+  border-radius: 2px;
+}

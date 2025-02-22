@@ -1,0 +1,12 @@
+.products {
+  margin-bottom: 76px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 245px);
+    gap: 144px 80px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}

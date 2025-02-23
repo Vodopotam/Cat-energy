@@ -1,46 +1,98 @@
 .additional-products {
-  margin-bottom: 86px;
+  padding-top: 25px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 86px;
+  }
+
+  &__container {
+    // width: 100%;
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: auto 250px;
+      gap: 80px;
+    }
+  }
 
   &__title {
     position: relative;
     display: inline-block;
     margin: 0;
     padding: 0;
-    margin-bottom: 81px;
+    margin-bottom: 36px;
     font-family: $font-secondary;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 80px;
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / -1;
+      margin-bottom: 0;
+    }
 
     &::before {
-      @include title-border-left;
+      @media (min-width: $tablet-width) {
+        // @include title-border-left;
+      }
     }
 
     &::after {
-      @include title-border-right;
+      // @include title-border-right;
+      // top: 60%;
     }
   }
 
-  &__container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto 250px;
-    gap: 80px;
-  }
-
   &__list {
-    width: 100%;
+    // width: 100%;
     margin: 0;
+    margin-bottom: 35px;
     padding: 0;
     list-style-type: none;
     border-top: 1px solid $color-light-grey;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 70px;
+      border: 1px solid $color-light-grey;
+      padding: 0 38px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+      padding: 0;
+      border: none;
+      border-top: 1px solid $color-light-grey;
+    }
   }
 
   &__item {
-    padding: 15px 0;
-    display: grid;
-    grid-template-columns: auto 150px 50px 244px;
-    column-gap: 40px;
-    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 19px;
     border-bottom: 1px solid $color-light-grey;
+
+    @media (min-width: $tablet-width) {
+      padding: 26px 0 28px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 15px 0 17px;
+      // grid-template-columns: 300px 200px 244px;
+      column-gap: 40px;
+      align-items: center;
+    }
   }
 }

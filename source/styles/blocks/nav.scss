@@ -75,7 +75,7 @@
 
     &--current::before {
       @media (min-width: $tablet-width) {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         right: 0;

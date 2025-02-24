@@ -908,9 +908,16 @@ img {
   text-transform: uppercase;
   align-items: center;
   font-family: Oswald, san-serif;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
   display: flex;
+}
+
+@media (width >= 1280px) {
+  .field {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .field__input {
@@ -924,8 +931,15 @@ img {
   margin-left: 15px;
   padding: 9px 20px;
   font-family: inherit;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@media (width >= 768px) {
+  .field__input {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .field__input::-webkit-outer-spin-button {
@@ -944,28 +958,50 @@ img {
   color: #444;
   text-transform: uppercase;
   font-family: Oswald, san-serif;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@media (width >= 768px) {
+  .field__input::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form {
-  margin-bottom: 82px;
+  margin-bottom: 32px;
 }
 
-.form__container {
-  flex-wrap: wrap;
-  gap: 70px 80px;
-  display: flex;
+@media (width >= 1280px) {
+  .form {
+    margin-bottom: 82px;
+  }
+}
+
+@media (width >= 768px) {
+  .form__container {
+    flex-wrap: wrap;
+    display: flex;
+  }
+}
+
+@media (width >= 1280px) {
+  .form__container {
+    gap: 70px 80px;
+  }
 }
 
 .form__group {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0 0 25px;
+  padding: 22px 0 0;
 }
 
-.form__group--half-width {
-  width: calc(50% - 40px);
+@media (width >= 1280px) {
+  .form__group--half-width {
+    width: calc(50% - 40px);
+  }
 }
 
 .form__label {
@@ -974,19 +1010,34 @@ img {
   display: grid;
 }
 
-.form__label--half-width {
-  width: 570px;
+@media (width >= 1280px) {
+  .form__label--half-width {
+    width: 570px;
+  }
 }
 
 .form__button {
   box-sizing: border-box;
   border: none;
-  min-width: 568px;
+  min-width: 280px;
   padding: 12px 26px;
 }
 
+@media (width >= 1280px) {
+  .form__button {
+    min-width: 568px;
+  }
+}
+
 .form__note {
-  font-size: 16px;
+  font-size: 14px;
+}
+
+@media (width >= 768px) {
+  .form__note {
+    margin-left: 60px;
+    font-size: 16px;
+  }
 }
 
 .field-group {
@@ -997,12 +1048,26 @@ img {
 }
 
 .field-group--has-border {
-  border: 1px solid #e7e7e7;
-  padding: 25px 28px;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 25px;
+}
+
+@media (width >= 768px) {
+  .field-group--has-border {
+    border: 1px solid #e7e7e7;
+    padding: 25px 28px;
+  }
 }
 
 .field-group--cat-data {
-  row-gap: 20px;
+  row-gap: 13px;
+}
+
+@media (width >= 768px) {
+  .field-group--cat-data {
+    row-gap: 20px;
+  }
 }
 
 .field-group--target .control {
@@ -1014,47 +1079,65 @@ img {
 }
 
 .field-group--contacts {
-  column-gap: 80px;
+  gap: 15px;
+}
+
+@media (width >= 768px) {
+  .field-group--contacts {
+    margin-bottom: 65px;
+  }
+}
+
+@media (width >= 1280px) {
+  .field-group--contacts {
+    column-gap: 80px;
+  }
 }
 
 .field-group--additional {
   flex-wrap: wrap;
-  column-gap: 104px;
+  gap: 15px;
   display: flex;
+}
+
+@media (width >= 1280px) {
+  .field-group--additional {
+    column-gap: 104px;
+  }
 }
 
 .field-group--additional .control {
   min-width: 221px;
 }
 
+@media (width >= 768px) {
+  .field-group--additional .control {
+    width: calc(50% - 7.5px);
+  }
+}
+
+@media (width >= 1280px) {
+  .field-group--additional .control {
+    width: calc(25% - 3.75px);
+  }
+}
+
 .field-group__title {
-  margin: 0 0 76px;
+  max-width: 200px;
+  margin: 0 0 20px;
   font-family: Oswald, san-serif;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 26px;
   position: relative;
 }
 
-.field-group__title:before {
-  content: "";
-  background-color: #68b738;
-  border-radius: 2px;
-  width: 60%;
-  height: 2px;
-  position: absolute;
-  top: 25px;
-  right: calc(100% + 40px);
-}
-
-.field-group__title:after {
-  content: "";
-  background-color: #68b738;
-  border-radius: 2px;
-  width: 100vw;
-  height: 2px;
-  position: absolute;
-  top: 25px;
-  left: calc(100% + 40px);
+@media (width >= 768px) {
+  .field-group__title {
+    max-width: 100%;
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .intro {
@@ -1201,24 +1284,54 @@ img {
 }
 
 .page-form {
-  padding-top: 187px;
+  border-top: 1px solid #d9d9d9;
+  padding-top: 27px;
+}
+
+@media (width >= 768px) {
+  .page-form {
+    border: none;
+    padding-top: 65px;
+  }
+}
+
+@media (width >= 1280px) {
+  .page-form {
+    padding-top: 187px;
+  }
 }
 
 .page-form__title {
   text-transform: uppercase;
-  margin: 0 0 56px;
+  margin: 0 0 37px;
   font-family: Oswald, san-serif;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+@media (width >= 768px) {
+  .page-form__title {
+    margin-bottom: 56px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .page-form__text {
   text-transform: uppercase;
-  max-width: 325px;
-  margin: 0 0 65px;
+  margin: 0 0 39px;
   font-family: Oswald, san-serif;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media (width >= 1280px) {
+  .page-form__text {
+    margin-bottom: 65px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .products {
@@ -1481,18 +1594,34 @@ img {
   resize: none;
   border: 1px solid #e7e7e7;
   width: 100%;
-  min-height: 170px;
-  padding: 10px 20px;
+  min-height: 150px;
+  padding: 10px 15px;
   font-family: Oswald, san-serif;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@media (width >= 1280px) {
+  .textarea {
+    min-height: 170px;
+    padding: 10px 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .textarea::placeholder {
   color: #444;
   text-transform: uppercase;
   font-family: inherit;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@media (width >= 1280px) {
+  .textarea::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

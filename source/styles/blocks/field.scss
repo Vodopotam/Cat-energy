@@ -2,23 +2,33 @@
   display: flex;
   align-items: center;
   font-family: $font-secondary;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
   color: $color-dark-grey;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &__input {
     height: 100%;
     margin-left: 15px;
     padding: 9px 20px;
     font-family: inherit;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 18px;
     color: $color-dark-grey;
     text-transform: uppercase;
     appearance: textfield;
     border: 1px solid #e7e7e7;
     box-sizing: border-box;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
@@ -28,10 +38,15 @@
 
     &::placeholder {
       font-family: $font-secondary;
-      font-size: 20px;
-      line-height: 30px;
+      font-size: 16px;
+      line-height: 18px;
       color: $color-dark-grey;
       text-transform: uppercase;
+
+      @media (min-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
   }
 }

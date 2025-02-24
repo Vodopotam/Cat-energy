@@ -1,20 +1,32 @@
 .textarea {
   width: 100%;
-  min-height: 170px;
-  padding: 10px 20px;
+  min-height: 150px;
+  padding: 10px 15px;
   font-family: $font-secondary;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
   color: $color-dark-grey;
   text-transform: uppercase;
   border: 1px solid #e7e7e7;
   resize: none;
 
-  &::placeholder {
-    font-family: inherit;
+  @media (min-width: $desktop-width) {
+    min-height: 170px;
+    padding: 10px 20px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 18px;
     color: $color-dark-grey;
     text-transform: uppercase;
+
+    @media (min-width: $desktop-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }

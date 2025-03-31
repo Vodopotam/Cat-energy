@@ -1,0 +1,63 @@
+.card-show-all {
+  padding-top: 80px;
+  background-color: $color-white;
+  display: block;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      '. .'
+      'title title'
+      'text text'
+      'button button';
+    padding-top: 161px;
+    border: 2px solid $color-very-light-grey;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: $font-secondary;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-darker-grey;
+
+    @media (min-width: $tablet-width) {
+      width: 50%;
+      margin: 0 auto;
+      grid-area: title;
+      font-size: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 200px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 21px;
+    line-height: 18px;
+    text-align: center;
+    color: $color-dark-grey;
+
+    @media (min-width: $tablet-width) {
+      grid-area: text;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+    grid-area: button;
+    align-self: flex-end;
+
+    @media (min-width: $desktop-width) {
+      width: 100%;
+    }
+  }
+}

@@ -1,12 +1,28 @@
 .products {
-  margin-bottom: 76px;
+  border-top: 1px solid #ebebeb;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+    border-top: none;
+  }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(4, 245px);
-    gap: 144px 80px;
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 30px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(324px, 1fr));
+      gap: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1220px;
+      margin-inline: auto;
+      grid-template-columns: repeat(4, minmax(245, 1fr));
+      gap: 144px 80px;
+    }
   }
 }

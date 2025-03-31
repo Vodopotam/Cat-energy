@@ -1,35 +1,51 @@
 .card {
+  min-width: 280px;
   position: relative;
   display: grid;
+  grid-template-columns: 140px auto;
   grid-template-areas:
-    "image image"
-    "title title"
-    "details details"
-    "button button";
-  padding: 160px 35px 40px 40px;
-  background-color: $color-very-light-grey;
+    'image title'
+    'image details'
+    'button button';
+  padding: 20px 20px 25px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ebebeb;
 
-  &--show-all {
-    background-color: $color-white;
-    border: 2px solid $color-very-light-grey;
+  @media (min-width: $tablet-width) {
     grid-template-areas:
-      ". ."
-      "title title"
-      "text text"
-      "text text"
-      "text text"
-      "button button";
+      'image image'
+      'title title'
+      'details details'
+      'button button';
+    padding: 160px 36px 40px;
+    background-color: $color-very-light-grey;
+
+    @media (min-width: $desktop-width) {
+      padding: 160px 35px 40px 40px;
+    }
   }
 
   &__title {
+    max-width: 80px;
     margin: 0;
+    margin-bottom: 18px;
     grid-area: title;
     font-family: $font-secondary;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 21px;
+    font-weight: 400;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     color: $color-darker-grey;
+
+    @media (min-width: $tablet-width) {
+      margin-inline: auto;
+      margin-bottom: 21px;
+      max-width: 150px;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
   }
 
   &__text {
@@ -55,9 +71,12 @@
   &__row {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 8px;
     margin-bottom: 6px;
-    border-bottom: 1px solid $color-light-grey;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 8px;
+      border-bottom: 1px solid $color-light-grey;
+    }
   }
 
   &__description {
@@ -67,8 +86,16 @@
 
   &__button {
     grid-area: button;
-    padding: 10px 35px;
+    margin: 0 auto;
     font-size: 16px;
-    align-self: flex-end;
+
+    @media (min-width: $tablet-width) {
+      align-self: flex-end;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 168px;
+      width: 100%;
+    }
   }
 }

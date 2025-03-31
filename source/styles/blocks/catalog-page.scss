@@ -1,12 +1,28 @@
 .catalog-page {
-  padding-top: 188px;
+  padding-top: 27px;
+  border-top: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+    border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 188px;
+  }
 
   &__title {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 84px;
+    margin-bottom: 41px;
     font-family: $font-secondary;
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 82px;
+      // padding-bottom: 84px;
+      font-size: 60px;
+      line-height: 60px;
+    }
   }
 }

@@ -4,6 +4,7 @@
   &__container {
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: center;
 
     @media (min-width: $tablet-width) {
       padding-top: 36px;
@@ -12,10 +13,20 @@
       justify-content: space-between;
       align-items: center;
     }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 44px;
+      padding-bottom: 44px;
+    }
   }
 
   &__logo {
+    display: block;
     padding: 20px 0 30px;
-    justify-content: center;
+    // justify-content: center;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
   }
 }

@@ -2,6 +2,10 @@
   position: relative;
   padding-top: 28px;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 140px;
+  }
+
   &__container {
     text-align: center;
 
@@ -15,8 +19,6 @@
   }
 
   &__title {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
     margin: 0;
     margin-bottom: 25px;
     font-family: $font-secondary;
@@ -26,6 +28,8 @@
     color: $color-white;
 
     @media (min-width: $tablet-width) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
       margin-bottom: 40px;
       font-size: 60px;
       line-height: 60px;
@@ -34,8 +38,6 @@
   }
 
   &__text {
-    grid-column: 1 / -1;
-    grid-row: 2/ 3;
     margin: 0;
     margin-bottom: 30px;
     font-family: $font-secondary;
@@ -49,6 +51,8 @@
       font-size: 20px;
       line-height: 20px;
       color: $color-black;
+      // grid-column: 1 / -1;
+      // grid-row: 2/ 3;
     }
   }
 
@@ -60,9 +64,12 @@
   }
 
   &__button {
+    margin: 0 auto;
+
     @media (min-width: $tablet-width) {
       grid-column: 1 / -1;
       grid-row: 3/ 4;
+      margin-left: 0;
     }
   }
 }

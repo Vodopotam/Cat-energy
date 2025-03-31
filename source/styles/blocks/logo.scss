@@ -1,7 +1,21 @@
 .logo {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   &__img {
-    margin-right: 58px;
+    @media (min-width: $tablet-width) {
+      margin-right: 12px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 14px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }

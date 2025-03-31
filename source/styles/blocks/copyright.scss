@@ -1,8 +1,30 @@
 .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding-top: 22px;
+  padding-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
   &__text {
+    font-size: 16px;
+    line-height: 100%;
     color: $color-dark-grey;
-    line-height: 18.4px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 22px;
+    }
+  }
+
+  &__icon {
+    width: 27px;
+    height: 34px;
+    background-image: url('../../images/html_academy.svg');
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

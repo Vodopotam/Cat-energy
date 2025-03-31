@@ -16,14 +16,14 @@
             <img class="logo__img" src="images/logo_img.svg" width="34" height="38" alt="Логотип Компании">
             <img class="logo__text" src="images/logo_text.svg" width="101" height="18" alt="Логотип Компании">
           </a>
-          <button class="header__toggler">
+          <button class="header__toggler header__toggler--closed">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
-        <nav class="header__nav nav">
+        <nav class="header__nav nav nav--closed nav--nojs">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link nav__link--current" href="#">Главная</a>
+              <a class="nav__link nav__link--current">Главная</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="./catalog.html">Каталог продукции</a>
@@ -117,11 +117,11 @@
               <ul class="example__list">
                 <li class="example__item">
                   <b class="example__number">5 КГ</b>
-                  <p class="example__text">снижение веса</p>
+                  <p class="example__text">снижение <br>веса</p>
                 </li>
                 <li class="example__item">
                   <b class="example__number">60 ДНЕЙ</b>
-                  <p class="example__text">затрачено времени</p>
+                  <p class="example__text">затрачено <br>времени</p>
                 </li>
               </ul>
               <div class="example__cost">
@@ -139,7 +139,10 @@
 
             <div class="example__range">
               <p class="example__range-text">было</p>
-              <div class="example__bar"></div>
+              <div class="example__bar">
+                <div class="example__range-button" style="left: 50%"></div>
+                <div class="example__inner-bar" style="right: 43px"></div>
+              </div>
               <p class="example__range-text">стало</p>
             </div>
           </div>
@@ -151,7 +154,7 @@
           <h2 class="visually-hidden">Контакты</h2>
           <p class="contacts__heading">Приглашаем к сотрудничеству дилеров!</p>
           <p class="contacts__address">
-            ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург
+            ул. Большая<br>Конюшенная, д. 19/8<br><span class="contacts__address-city">Санкт-Петербург</span>
           </p>
         </div>
         <img src="" alt="Карта проезда">
@@ -166,13 +169,13 @@
         <div class="social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vk" href="#"><span class="vissually-hidden">ВКонтакте</span></a>
+              <a class="social__link social__link--vk" href="#"><span class="visually-hidden">ВКонтакте</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#"><span class="vissually-hidden">Instagram</span></a>
+              <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Instagram</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#"><span class="vissually-hidden">Facebook</span></a>
+              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Facebook</span></a>
             </li>
           </ul>
         </div>
@@ -183,5 +186,26 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.nav');
+      var navToggle = document.querySelector('.header__toggler');
+
+      navMain.classList.remove('nav--nojs');
+
+      navToggle.addEventListener('click', function () {
+        if (navMain.classList.contains('nav--closed')) {
+          navMain.classList.remove('nav--closed');
+          navMain.classList.add('nav--opened');
+          navToggle.classList.remove('header__toggler--closed');
+          navToggle.classList.add('header__toggler--opened');
+        } else {
+          navMain.classList.add('nav--closed');
+          navMain.classList.remove('nav--opened');
+          navToggle.classList.add('header__toggler--closed');
+          navToggle.classList.remove('header__toggler--opened');
+        }
+      });
+    </script>
   </body>
 </html>

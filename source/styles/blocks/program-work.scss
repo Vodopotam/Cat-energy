@@ -1,11 +1,15 @@
 .program-work {
-  &__container {
-    margin-bottom: 50px;
+  // &__container {
+  margin-bottom: 50px;
 
-    @media (min-width: $tablet-width) {
-      margin-bottom: 90px;
-    }
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 90px;
+  }
+  // }
 
   &__title {
     margin-bottom: 40px;
@@ -23,20 +27,100 @@
     gap: 20px;
 
     @media (min-width: $tablet-width) {
+      margin-right: 80px;
       grid-template-columns: repeat(2, minmax(248, 1fr));
-      gap: 76px;
+      gap: 37px 137px;
     }
 
     @media (min-width: $desktop-width) {
+      margin-right: 0;
       grid-template-columns: repeat(4, minmax(248, 1fr));
+      gap: 80px;
     }
   }
 
   &__item {
+    position: relative;
     padding-left: 80px;
+    counter-increment: number;
 
     @media (min-width: $tablet-width) {
       padding: 150px 0 58px;
+
+      &::after {
+        content: counter(number);
+        min-width: 134px;
+        text-align: left;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-family: $font-secondary;
+        font-size: 280px;
+        line-height: 280px;
+        font-weight: 400;
+        color: #f2f2f2;
+        z-index: -1;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background-color: $color-basic;
+
+      @media (min-width: $tablet-width) {
+        top: 40px;
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &--benefit {
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../../images/icon_leaf.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px 28px;
+      }
+    }
+
+    &--composition {
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../../images/icon_tub.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28.3px 31px;
+      }
+    }
+
+    &--replacement {
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../../images/icon_eat.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px 30px;
+      }
+    }
+
+    &--time {
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../../images/icon_alarm.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px 30px;
+      }
     }
   }
 
@@ -45,7 +129,7 @@
     color: $color-dark-grey;
 
     @media (min-width: $tablet-width) {
-      max-width: 225px;
+      max-width: 245px;
     }
   }
 }

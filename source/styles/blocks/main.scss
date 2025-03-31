@@ -12,19 +12,19 @@
 
     @media (min-width: $desktop-width) {
       margin-bottom: 82px;
-      padding-top: 115px;
+      padding-top: 223px;
       padding-bottom: 185px;
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       right: 0;
       left: 0;
       height: 302px;
       background-color: $color-basic;
-      background-image: url("../../images/main_bg_768@1x.jpg");
+      background-image: url('../../images/main_bg_768@1x.jpg');
       background-repeat: no-repeat;
       background-position: right;
       background-size: cover;
@@ -40,7 +40,7 @@
         bottom: 0;
         height: auto;
         background-color: $color-basic;
-        background-image: url("../../images/main_bg@1x.jpg");
+        background-image: url('../../images/main_bg@1x.jpg');
       }
     }
   }

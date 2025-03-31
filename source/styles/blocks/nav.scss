@@ -1,5 +1,4 @@
 .nav {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -9,8 +8,17 @@
   background-color: $color-white;
   z-index: 2;
 
-  &--shown {
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
     display: block;
+  }
+
+  &--nojs {
+    display: block;
+    position: relative;
   }
 
   @media (min-width: $tablet-width) {
@@ -60,7 +68,16 @@
     color: $color-black;
     text-align: center;
 
+    &[href]:hover {
+      opacity: 0.6;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
+
     @media (min-width: $tablet-width) {
+      padding: 10px 0;
       font-size: 18px;
       line-height: 24px;
       font-weight: 400;
@@ -75,11 +92,11 @@
 
     &--current::before {
       @media (min-width: $tablet-width) {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 16px;
+        bottom: 0;
         height: 2px;
         background-color: $color-basic;
       }

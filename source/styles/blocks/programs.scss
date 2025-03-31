@@ -1,14 +1,14 @@
 .programs {
-  &__container {
-    margin-bottom: 20px;
+  // &__container {
+  margin-bottom: 20px;
 
-    @media (min-width: $tablet-width) {
-      margin-bottom: 45px;
-    }
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
 
-    @media (min-width: $desktop-width) {
-      margin-bottom: 70px;
-    }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+    // }
   }
 
   &__list {
@@ -30,41 +30,148 @@
   }
 
   &__item {
+    position: relative;
     box-sizing: border-box;
     padding: 30px 20px 20px;
     background-color: $color-very-light-grey;
 
     @media (min-width: $tablet-width) {
-      padding: 77px calc(100% - 340px - 50px) 50px 50px;
+      padding: 77px calc(100% - 340px - 50px) 55px 50px;
     }
 
     @media (min-width: $desktop-width) {
       max-width: 570px;
       padding: 77px 52px 55px;
     }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: $color-basic;
+      border-radius: 50%;
+
+      @media (min-width: $tablet-width) {
+        top: 90px;
+        right: 60px;
+        left: auto;
+        width: 200px;
+        height: 200px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 47px;
+        left: 52px;
+        right: auto;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &--weight-loss {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 21px;
+        left: 29px;
+        width: 36px;
+        height: 50px;
+        background-image: url('../../images/program_loss.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        // background-size: 36px 50px;
+
+        @media (min-width: $tablet-width) {
+          top: 81px;
+          right: 92px;
+          left: auto;
+          width: 140px;
+          height: 194px;
+        }
+
+        @media (min-width: $desktop-width) {
+          top: 41px;
+          left: 67px;
+          right: auto;
+          width: 70px;
+          height: 97px;
+        }
+      }
+    }
+
+    &--weight-gain {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 35px;
+        left: 13px;
+        width: 67px;
+        height: 28px;
+        background-image: url('../../images/program_mass.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media (min-width: $tablet-width) {
+          top: 91px;
+          right: 28px;
+          left: auto;
+          width: 269px;
+          height: 200px;
+        }
+
+        @media (min-width: $desktop-width) {
+          top: 67px;
+          left: 33;
+          right: auto;
+          width: 135px;
+          height: 56px;
+        }
+      }
+    }
   }
 
   &__title {
     margin: 0;
     margin-bottom: 30px;
+    margin-left: 70px;
     font-family: $font-secondary;
     font-size: 24px;
     line-height: 36px;
+    color: $color-black;
     text-transform: uppercase;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 24px;
+      padding-left: 0;
       font-size: 36px;
     }
 
     @media (min-width: $desktop-width) {
+      margin-left: 160px;
       margin-bottom: 73px;
     }
   }
 
   &__text {
     margin: 0;
-    margin-bottom: 23px;
+    // padding-bottom: 23px;
+
+    &:last-of-type {
+      padding-bottom: 23px;
+      border-bottom: 1px solid #d9d9d9;
+
+      @media (min-width: $tablet-width) {
+        padding-bottom: 33px;
+        border-bottom: none;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-bottom: 10px;
+      }
+    }
 
     @media (min-width: $tablet-width) {
       color: $color-black;
@@ -72,11 +179,43 @@
   }
 
   &__link {
+    position: relative;
+    display: inline-block;
+    padding-top: 15px;
+    padding-right: 40px;
     font-family: $font-secondary;
     font-size: 20px;
     line-height: 30px;
     text-transform: uppercase;
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
+
+    &[href]:hover {
+      opacity: 0.6;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
+
+    &--disabled,
+    &--disabled:hover,
+    &--disabled:active {
+      cursor: default;
+      opacity: 0.2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(15px / 2 + 50%);
+      right: 0;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 12px;
+      background-color: $color-black;
+      mask-image: url('../../icons/arrow.svg');
+    }
   }
 }

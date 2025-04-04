@@ -20,6 +20,15 @@
     width: 40px;
     height: 40px;
 
+    &:hover::before {
+      background-color: $color-basic;
+    }
+
+    &:active::before {
+      background-color: $color-basic;
+      opacity: 0.3;
+    }
+
     @media (min-width: $tablet-width) {
       transform: scale(1.4);
     }
@@ -30,26 +39,24 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      background-color: #666666;
     }
 
     &--vk::before {
       width: 20px;
       height: 12.36px;
-      background-color: #666666;
       mask-image: url('../../images/vk.svg');
     }
 
     &--instagram::before {
       width: 16px;
       height: 16px;
-      background-color: #666666;
       mask-image: url('../../images/instagram.svg');
     }
 
     &--facebook::before {
       width: 9.5px;
       height: 18px;
-      background-color: #666666;
       mask-image: url('../../images/facebook.svg');
     }
   }

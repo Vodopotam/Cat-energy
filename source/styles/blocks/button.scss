@@ -28,9 +28,30 @@
     background-color: #5eaa2f;
   }
 
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active,
+  &--disabled,
+  &--disabled:hover,
+  &--disabled:active {
+    cursor: default;
+    color: rgba($color: $color-dark-grey, $alpha: 0.3);
+    background-color: $color-light-grey;
+    opacity: 0.4;
+  }
+
   &--secondary {
     background-color: $color-very-light-grey;
     font-size: 16px;
     color: $color-dark-grey;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba($color: $color-dark-grey, $alpha: 0.3);
+      background-color: #ebebeb;
+    }
   }
 }

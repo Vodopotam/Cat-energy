@@ -1,4 +1,5 @@
 .card-show-all {
+  position: relative;
   padding-top: 80px;
   background-color: $color-white;
   display: block;
@@ -12,8 +13,41 @@
       'title title'
       'text text'
       'button button';
+    justify-content: center;
     padding-top: 161px;
     border: 2px solid $color-very-light-grey;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(25px + 30px / 2);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: #d3d3d3;
+
+    @media (min-width: $tablet-width) {
+      top: calc(52px + 60px / 2);
+      width: 60px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(25px + 30px / 2);
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    width: 30px;
+    height: 2px;
+    background-color: #d3d3d3;
+
+    @media (min-width: $tablet-width) {
+      top: calc(52px + 60px / 2);
+      width: 60px;
+    }
   }
 
   &__title {
@@ -28,26 +62,31 @@
     color: $color-darker-grey;
 
     @media (min-width: $tablet-width) {
-      width: 50%;
+      width: 150px;
       margin: 0 auto;
       grid-area: title;
       font-size: 20px;
     }
 
     @media (min-width: $desktop-width) {
-      width: 200px;
+      // width: 200px;
     }
   }
 
   &__text {
     margin: 0;
     margin-bottom: 21px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 16px;
     text-align: center;
     color: $color-dark-grey;
 
     @media (min-width: $tablet-width) {
+      width: 170px;
       grid-area: text;
+      align-self: start;
+      margin: 0 auto;
+      font-size: 16px;
     }
   }
 

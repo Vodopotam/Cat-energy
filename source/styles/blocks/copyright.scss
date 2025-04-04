@@ -6,6 +6,21 @@
   padding-top: 22px;
   padding-bottom: 5px;
 
+  &:hover {
+    cursor: pointer;
+
+    & .copyright__icon {
+      background-color: $color-basic;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    & .copyright__icon {
+      background-color: $color-basic;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0;
   }
@@ -23,8 +38,7 @@
   &__icon {
     width: 27px;
     height: 34px;
-    background-image: url('../../images/html_academy.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #666666;
+    mask-image: url('../../images/html_academy.svg');
   }
 }

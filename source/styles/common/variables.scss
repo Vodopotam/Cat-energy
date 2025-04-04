@@ -13,7 +13,7 @@ $color-dark-grey: #444444;
 $color-darker-grey: #222222;
 
 // font
-$font-secondary: "Oswald", san-serif;
+$font-secondary: 'Oswald', san-serif;
 
 // Viewports
 $tablet-width: 768px;
@@ -21,7 +21,7 @@ $desktop-width: 1280px;
 // $mobile-width-only: 767px;
 
 @mixin title-border-left {
-  content: "";
+  content: '';
   position: absolute;
   top: 25px;
   right: calc(100% + 40px);
@@ -32,7 +32,7 @@ $desktop-width: 1280px;
 }
 
 @mixin title-border-right {
-  content: "";
+  content: '';
   position: absolute;
   top: 25px;
   left: calc(100% + 40px);

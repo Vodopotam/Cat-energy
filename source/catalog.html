@@ -32,7 +32,7 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
-        <nav class="header__nav nav--closed nav--nojs">
+        <nav class="header__nav nav nav--closed nav--nojs">
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link nav__link--color-black" href="./index.html"
@@ -259,84 +259,109 @@
         <section class="additional-products">
           <div class="additional-products__container wrapper">
             <h2 class="additional-products__title">Дополнительные товары</h2>
-
-            <ul class="additional-products__list">
-              <li class="additional-products__item additional-product">
-                <h3 class="additional-product__name">Сахарозаменитель</h3>
-                <dl class="additional-product__details">
-                  <dt class="visually-hidden">Вес</dt>
-                  <dd class="additional-product__weight">1 упаковка (100 г)</dd>
-                  <dt class="visually-hidden">Стоимость</dt>
-                  <dd class="additional-product__cost">200 Р.</dd>
-                </dl>
-                <a class="additional-product__button button" href="./form.html"
-                  >Заказать</a
-                >
-              </li>
-              <li class="additional-products__item additional-product">
-                <h3 class="additional-product__name">Питьевая вода</h3>
-                <dl class="additional-product__details">
-                  <dt class="visually-hidden">Вес</dt>
-                  <dd class="additional-product__weight">5 литров</dd>
-                  <dt class="visually-hidden">Стоимость</dt>
-                  <dd class="additional-product__cost">50 Р.</dd>
-                </dl>
-                <a class="additional-product__button button" href="./form.html"
-                  >Заказать</a
-                >
-              </li>
-              <li class="additional-products__item additional-product">
-                <h3 class="additional-product__name">Молоко</h3>
-                <dl class="additional-product__details">
-                  <dt class="visually-hidden">Вес</dt>
-                  <dd class="additional-product__weight">1 литр</dd>
-                  <dt class="visually-hidden">Стоимость</dt>
-                  <dd class="additional-product__cost">100 Р.</dd>
-                </dl>
-                <a class="additional-product__button button" href="./form.html"
-                  >Заказать</a
-                >
-              </li>
-              <li class="additional-products__item additional-product">
-                <h3 class="additional-product__name">Витамины</h3>
-                <dl class="additional-product__details">
-                  <dt class="visually-hidden">Вес</dt>
-                  <dd class="additional-product__weight">1 упаковка (30 г)</dd>
-                  <dt class="visually-hidden">Стоимость</dt>
-                  <dd class="additional-product__cost">300 Р.</dd>
-                </dl>
-                <a class="additional-product__button button" href="./form.html"
-                  >Заказать</a
-                >
-              </li>
-            </ul>
-            <aside class="promo">
-              <h2 class="visually-hidden">Участвуйте в промоакции!</h2>
-              <p class="promo__text">
-                Закажите все<br />и получите чехол для<br />кота в подарок!
-              </p>
-            </aside>
+            <div class="additional-products__info">
+              <ul class="additional-products__list">
+                <li class="additional-products__item additional-product">
+                  <h3 class="additional-product__name">Сахарозаменитель</h3>
+                  <dl class="additional-product__details">
+                    <dt class="visually-hidden">Вес</dt>
+                    <dd class="additional-product__weight">
+                      1 упаковка (100 г)
+                    </dd>
+                    <dt class="visually-hidden">Стоимость</dt>
+                    <dd class="additional-product__cost">200 Р.</dd>
+                  </dl>
+                  <a
+                    class="additional-product__button button"
+                    href="./form.html"
+                    >Заказать</a
+                  >
+                </li>
+                <li class="additional-products__item additional-product">
+                  <h3 class="additional-product__name">Питьевая вода</h3>
+                  <dl class="additional-product__details">
+                    <dt class="visually-hidden">Вес</dt>
+                    <dd class="additional-product__weight">5 литров</dd>
+                    <dt class="visually-hidden">Стоимость</dt>
+                    <dd class="additional-product__cost">50 Р.</dd>
+                  </dl>
+                  <a
+                    class="additional-product__button button"
+                    href="./form.html"
+                    >Заказать</a
+                  >
+                </li>
+                <li class="additional-products__item additional-product">
+                  <h3 class="additional-product__name">Молоко</h3>
+                  <dl class="additional-product__details">
+                    <dt class="visually-hidden">Вес</dt>
+                    <dd class="additional-product__weight">1 литр</dd>
+                    <dt class="visually-hidden">Стоимость</dt>
+                    <dd class="additional-product__cost">100 Р.</dd>
+                  </dl>
+                  <a
+                    class="additional-product__button button"
+                    href="./form.html"
+                    >Заказать</a
+                  >
+                </li>
+                <li class="additional-products__item additional-product">
+                  <h3 class="additional-product__name">Витамины</h3>
+                  <dl class="additional-product__details">
+                    <dt class="visually-hidden">Вес</dt>
+                    <dd class="additional-product__weight">
+                      1 упаковка (30 г)
+                    </dd>
+                    <dt class="visually-hidden">Стоимость</dt>
+                    <dd class="additional-product__cost">300 Р.</dd>
+                  </dl>
+                  <a
+                    class="additional-product__button button"
+                    href="./form.html"
+                    >Заказать</a
+                  >
+                </li>
+              </ul>
+              <aside class="additional-products__promo promo">
+                <h2 class="visually-hidden">Участвуйте в промоакции!</h2>
+                <p class="promo__text">
+                  Закажите все<br />и получите чехол для<br />кота в подарок!
+                </p>
+              </aside>
+            </div>
           </div>
         </section>
       </div>
 
       <footer class="contacts contacts--color-grey">
         <div class="contacts__container wrapper">
-          <h2 class="visually-hidden">Контакты</h2>
-          <p class="contacts__heading">приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__address">
-            ул. Большая<br />Конюшенная, д. 19/8<br />Санкт-Петербург
-          </p>
-          <img src="#" alt="Карта проезда" />
+          <div class="contacts__info">
+            <h2 class="visually-hidden">Контакты</h2>
+            <p class="contacts__heading">
+              приглашаем к сотрудничеству дилеров!
+            </p>
+            <p class="contacts__address">
+              ул. Большая<br />Конюшенная, д. 19/8<br /><span
+                class="contacts__address-city"
+                >Санкт-Петербург</span
+              >
+            </p>
+          </div>
         </div>
+        <img class="contacts__map" src="#" alt="Карта проезда" />
       </footer>
     </main>
 
     <footer class="footer">
       <div class="footer__container wrapper">
-        <a class="footer__logo logo" href="./index.html"
-          ><img src="" alt="Логотип компании"
-        /></a>
+        <a class="footer__logo logo" href="./index.html">
+          <img
+            width="128"
+            height="24"
+            src="images/logo_text.svg"
+            alt="Логотип компании"
+          />
+        </a>
         <div class="social">
           <ul class="social__list">
             <li class="social__item">

@@ -5,12 +5,22 @@
   box-sizing: border-box;
 
   &--has-border {
-    padding: 25px 28px;
-    border: 1px solid #e7e7e7;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      padding: 25px 28px;
+      border: 1px solid #e7e7e7;
+    }
   }
 
   &--cat-data {
-    row-gap: 20px;
+    row-gap: 13px;
+
+    @media (min-width: $tablet-width) {
+      row-gap: 20px;
+    }
   }
 
   &--target {
@@ -24,33 +34,61 @@
   }
 
   &--contacts {
-    column-gap: 80px;
+    gap: 15px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 65px;
+    }
+
+    @media (min-width: $desktop-width) {
+      column-gap: 80px;
+    }
   }
 
   &--additional {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 104px;
+    gap: 15px;
+
+    @media (min-width: $desktop-width) {
+      column-gap: 104px;
+    }
 
     & .control {
       min-width: 221px;
+
+      @media (min-width: $tablet-width) {
+        width: calc((100% - 15px) / 2);
+      }
+
+      @media (min-width: $desktop-width) {
+        width: calc((100% - 15px) / 4);
+      }
     }
   }
 
   &__title {
+    max-width: 200px;
     margin: 0;
-    margin-bottom: 76px;
+    margin-bottom: 20px;
     position: relative;
     font-family: $font-secondary;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 26px;
 
-    &::before {
-      @include title-border-left;
+    @media (min-width: $tablet-width) {
+      max-width: 100%;
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 36px;
     }
 
-    &::after {
-      @include title-border-right;
-    }
+    // &::before {
+    //   @include title-border-left;
+    // }
+
+    // &::after {
+    //   @include title-border-right;
+    // }
   }
 }

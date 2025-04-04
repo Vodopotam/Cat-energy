@@ -11,9 +11,27 @@
   <body class="page__body">
     <header class="page__header header">
       <div class="header__container wrapper">
-        <a class="header__logo logo" href="./index.html">
-          <img src="" alt="Логотип Компании" />
-        </a>
+        <div class="header__bar">
+          <a class="header__logo logo" href="#">
+            <img
+              class="logo__img"
+              src="images/logo_img.svg"
+              width="34"
+              height="38"
+              alt="Логотип Компании"
+            />
+            <img
+              class="logo__text"
+              src="images/logo_text.svg"
+              width="101"
+              height="18"
+              alt="Логотип Компании"
+            />
+          </a>
+          <button class="header__toggler">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <nav class="header__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -34,9 +52,6 @@
               >
             </li>
           </ul>
-          <button class="nav__button" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
         </nav>
       </div>
     </header>
@@ -45,7 +60,7 @@
       <header class="page-form__header wrapper">
         <h1 class="page-form__title">Подбор программы</h1>
         <p class="page-form__text">
-          Заполните анкету, и мы подберем программу питания для вашего кота
+          Заполните анкету, и мы подберем<br />программу питания для вашего кота
         </p>
       </header>
 
@@ -223,9 +238,9 @@
         </form>
       </section>
 
-      <footer class="contacts">
+      <footer class="contacts contacts--color-grey">
         <div class="contacts__container wrapper">
-          <h2 class="vissually-hidden">Контакты</h2>
+          <h2 class="visually-hidden">Контакты</h2>
           <p class="contacts__heading">приглашаем к сотрудничеству дилеров!</p>
           <p class="contacts__address">
             ул. Большая<br />Конюшенная, д. 19/8<br />Санкт-Петербург
@@ -236,7 +251,7 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__container">
+      <div class="footer__container wrapper">
         <a class="footer__logo logo" href="./index.html">
           <img src="" alt="Логотип компании" />
         </a>

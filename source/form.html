@@ -12,7 +12,7 @@
     <header class="page__header header">
       <div class="header__container wrapper">
         <div class="header__bar">
-          <a class="header__logo logo" href="#">
+          <a class="header__logo logo" href="./index.html">
             <img
               class="logo__img"
               src="images/logo_img.svg"
@@ -28,11 +28,11 @@
               alt="Логотип Компании"
             />
           </a>
-          <button class="header__toggler">
+          <button class="header__toggler header__toggler--closed">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
-        <nav class="header__nav nav">
+        <nav class="header__nav nav nav--closed nav--nojs">
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link nav__link--color-black" href="./index.html"
@@ -45,9 +45,7 @@
               >
             </li>
             <li class="nav__item">
-              <a
-                class="nav__link nav__link--color-black nav__link--current"
-                href="#"
+              <a class="nav__link nav__link--color-black nav__link--current"
                 >Подбор программы</a
               >
             </li>
@@ -104,12 +102,12 @@
             </fieldset>
 
             <fieldset
-              class="form__group form__group--half-width field-group field-group--target field-group--has-border"
+              class="form__group form__group--half-width field-group field-group--target"
             >
               <legend class="visually-hidden">Цель программы</legend>
               <label class="control">
                 <input
-                  class="control__input"
+                  class="control__input visually-hidden"
                   type="radio"
                   name="program"
                   value="slim"
@@ -121,7 +119,7 @@
               </label>
               <label class="control">
                 <input
-                  class="control__input"
+                  class="control__input visually-hidden"
                   type="radio"
                   name="program"
                   value="weight_gain"
@@ -132,7 +130,7 @@
               </label>
               <label class="control">
                 <input
-                  class="control__input"
+                  class="control__input visually-hidden"
                   type="radio"
                   name="program"
                   value="need_advice"
@@ -143,14 +141,16 @@
               </label>
             </fieldset>
 
-            <fieldset class="form__group field-group field-group--contacts">
+            <fieldset
+              class="form__group field-group field-group--contacts field-group--has-border"
+            >
               <legend class="field-group__title">
                 Контактные данные (владельца кота)
               </legend>
               <label class="form__label form__label--half-width field">
                 E-mail:*
                 <input
-                  class="field__input"
+                  class="field__input field__input--email"
                   type="email"
                   name="email"
                   placeholder="kuklachev@gmail.com"
@@ -161,7 +161,7 @@
               <label class="form__label form__label--half-width field">
                 Телефон:*
                 <input
-                  class="field__input"
+                  class="field__input field__input--phone"
                   type="tel"
                   name="tel"
                   placeholder="8 (960) 900-60-90"
@@ -186,7 +186,7 @@
               <legend class="field-group__title">Дополнительно</legend>
               <label class="control">
                 <input
-                  class="control__input"
+                  class="control__input visually-hidden"
                   type="checkbox"
                   name="additional"
                   value="sweetener"
@@ -198,7 +198,7 @@
               </label>
               <label class="control">
                 <input
-                  class="control__input"
+                  class="control__input visually-hidden"
                   type="checkbox"
                   name="additional"
                   value="water"
@@ -209,7 +209,7 @@
               </label>
               <label class="control">
                 <input
-                  class="control__input"
+                  class="control__input visually-hidden"
                   type="checkbox"
                   name="additional"
                   value="milk"
@@ -220,7 +220,7 @@
               </label>
               <label class="control">
                 <input
-                  class="control__input"
+                  class="control__input visually-hidden"
                   type="checkbox"
                   name="additional"
                   value="vitamins"
@@ -240,36 +240,48 @@
 
       <footer class="contacts contacts--color-grey">
         <div class="contacts__container wrapper">
-          <h2 class="visually-hidden">Контакты</h2>
-          <p class="contacts__heading">приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__address">
-            ул. Большая<br />Конюшенная, д. 19/8<br />Санкт-Петербург
-          </p>
-          <img src="" alt="Карта проезда" />
+          <div class="contacts__info">
+            <h2 class="visually-hidden">Контакты</h2>
+            <p class="contacts__heading">
+              приглашаем к сотрудничеству дилеров!
+            </p>
+            <p class="contacts__address">
+              ул. Большая<br />Конюшенная, д. 19/8<br /><span
+                class="contacts__address-city"
+                >Санкт-Петербург</span
+              >
+            </p>
+          </div>
         </div>
+        <img class="contacts__map" src="#" alt="Карта проезда" />
       </footer>
     </main>
 
     <footer class="footer">
       <div class="footer__container wrapper">
         <a class="footer__logo logo" href="./index.html">
-          <img src="" alt="Логотип компании" />
+          <img
+            width="128"
+            height="24"
+            src="images/logo_text.svg"
+            alt="Логотип компании"
+          />
         </a>
         <div class="social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vk" href="#">
-                <span class="vissually-hidden">ВКонтакте</span>
+                <span class="visually-hidden">ВКонтакте</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--instagram" href="#">
-                <span class="vissually-hidden">Instagram</span>
+                <span class="visually-hidden">Instagram</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
-                <span class="vissually-hidden">Facebook</span>
+                <span class="visually-hidden">Facebook</span>
               </a>
             </li>
           </ul>
@@ -281,5 +293,26 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.nav');
+      var navToggle = document.querySelector('.header__toggler');
+
+      navMain.classList.remove('nav--nojs');
+
+      navToggle.addEventListener('click', function () {
+        if (navMain.classList.contains('nav--closed')) {
+          navMain.classList.remove('nav--closed');
+          navMain.classList.add('nav--opened');
+          navToggle.classList.remove('header__toggler--closed');
+          navToggle.classList.add('header__toggler--opened');
+        } else {
+          navMain.classList.add('nav--closed');
+          navMain.classList.remove('nav--opened');
+          navToggle.classList.add('header__toggler--closed');
+          navToggle.classList.remove('header__toggler--opened');
+        }
+      });
+    </script>
   </body>
 </html>

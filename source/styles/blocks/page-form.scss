@@ -1,5 +1,4 @@
 .page-form {
-  padding-top: 27px;
   border-top: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
@@ -11,6 +10,10 @@
     padding-top: 187px;
   }
 
+  &__header {
+    margin-bottom: 39px;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 37px;
@@ -18,7 +21,8 @@
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
-    text-transform: uppercase;
+    letter-spacing: 0;
+    color: $color-black;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 56px;
@@ -30,11 +34,11 @@
   &__text {
     // max-width: 226px;
     margin: 0;
-    margin-bottom: 39px;
     font-family: $font-secondary;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
+    color: $color-black;
 
     @media (min-width: $tablet-width) {
     }

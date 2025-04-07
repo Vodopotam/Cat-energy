@@ -13,9 +13,10 @@
   }
 
   &__input {
+    position: relative;
     height: 100%;
     margin-left: 15px;
-    padding: 9px 20px;
+    padding: 13px 15px;
     font-family: inherit;
     font-size: 16px;
     line-height: 18px;
@@ -26,6 +27,7 @@
     box-sizing: border-box;
 
     @media (min-width: $tablet-width) {
+      padding: 9px 20px;
       font-size: 20px;
       line-height: 30px;
     }
@@ -47,6 +49,20 @@
         font-size: 20px;
         line-height: 30px;
       }
+    }
+
+    &--email {
+      background-image: url('../../icons/email_icon.svg');
+      background-repeat: no-repeat;
+      background-position: 95% center;
+      background-size: 20px 14px;
+    }
+
+    &--phone {
+      background-image: url('../../icons/phone_icon.svg');
+      background-repeat: no-repeat;
+      background-position: 95% center;
+      background-size: 20px 20px;
     }
   }
 }

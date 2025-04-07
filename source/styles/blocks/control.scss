@@ -1,9 +1,69 @@
 .control {
+  min-height: 30px;
+  position: relative;
+  padding-left: 45px;
+  display: flex;
+  align-items: center;
+
   &__label {
     font-family: $font-secondary;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 18px;
     color: $color-darker-grey;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+.control__input[type='radio'] {
+  & + .control__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.control__input[type='radio']:checked {
+  & + .control__mark::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 13.5px;
+    height: 13.5px;
+    background-color: $color-basic;
+  }
+}
+
+.control__input[type='checkbox'] {
+  & + .control__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.control__input[type='checkbox']:checked {
+  & + .control__mark {
+    background-image: url('../../icons/check_icon.svg');
+    background-repeat: no-repeat;
+    background-size: 18px 14px;
+    background-position: center;
   }
 }

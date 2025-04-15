@@ -147,6 +147,12 @@ img {
   }
 }
 
+@media (width >= 1280px) {
+  .header__container {
+    padding-top: 30px;
+  }
+}
+
 .header__bar {
   justify-content: space-between;
   align-items: center;
@@ -266,6 +272,16 @@ img {
   }
 }
 
+@media (width >= 1280px) {
+  .nav__list--main .nav__link {
+    color: #fff;
+  }
+
+  .nav__list--main .nav__link--current:before {
+    background-color: #fff;
+  }
+}
+
 .nav__item {
   border-bottom: 1px solid #e6e6e6;
 }
@@ -309,7 +325,6 @@ img {
 
 @media (width >= 1280px) {
   .nav__link {
-    color: #fff;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -328,20 +343,6 @@ img {
   }
 }
 
-@media (width >= 1280px) {
-  .nav__link--current:before {
-    background-color: #fff;
-  }
-}
-
-.nav__link--color-black {
-  color: #111;
-}
-
-.nav__link--color-black.nav__link--current:before {
-  background-color: #68b738;
-}
-
 .nav__button {
   border: none;
   padding: 0;
@@ -355,6 +356,7 @@ img {
 
 .page {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .page:before, .page:after {
@@ -420,6 +422,57 @@ img {
     font-size: 60px;
     line-height: 60px;
   }
+
+  .title {
+    grid-column: 1 / -1;
+  }
+}
+
+.title--has-border {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.title--has-border:before {
+  content: "";
+  z-index: -2;
+  background-color: #68b738;
+  height: 2px;
+  position: absolute;
+  top: 13px;
+  left: -20px;
+  right: -20px;
+}
+
+@media (width >= 768px) {
+  .title--has-border:before {
+    top: 18px;
+    left: -70px;
+    right: -70px;
+  }
+}
+
+@media (width >= 1280px) {
+  .title--has-border:before {
+    left: -400px;
+    right: -400px;
+  }
+}
+
+.title--has-border .title__content {
+  position: relative;
+}
+
+.title--has-border .title__content:before {
+  content: "";
+  z-index: -1;
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  right: -40px;
 }
 
 .additional-product__name {
@@ -642,7 +695,7 @@ img {
 
 @media (width >= 768px) {
   .card {
-    background-color: #f2f2f2;
+    background-image: linear-gradient(#fff 0% 80px, #f2f2f2 80px 100%);
     grid-template-areas: "image image"
                          "title title"
                          "details details"
@@ -756,6 +809,7 @@ img {
 
 @media (width >= 768px) {
   .card-show-all {
+    background-image: none;
     border: 2px solid #f2f2f2;
     grid-template-columns: 1fr;
     grid-template-areas: ". ."
@@ -953,16 +1007,27 @@ img {
 }
 
 .control {
-  align-items: center;
   min-height: 30px;
   padding-left: 45px;
   display: flex;
   position: relative;
 }
 
+.control:hover {
+  cursor: pointer;
+}
+
+@media (width >= 768px) {
+  .control {
+    min-height: 40px;
+    padding-left: 60px;
+  }
+}
+
 .control__label {
   color: #222;
   text-transform: uppercase;
+  padding-top: 5px;
   font-family: Oswald, san-serif;
   font-size: 16px;
   line-height: 18px;
@@ -980,12 +1045,19 @@ img {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   display: flex;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media (width >= 768px) {
+  .control__input[type="radio"] + .control__mark {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 .control__input[type="radio"]:checked + .control__mark:before {
@@ -997,16 +1069,30 @@ img {
   position: absolute;
 }
 
+@media (width >= 768px) {
+  .control__input[type="radio"]:checked + .control__mark:before {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 .control__input[type="checkbox"] + .control__mark {
   border: 1px solid #cdcdcd;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   display: flex;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media (width >= 768px) {
+  .control__input[type="checkbox"] + .control__mark {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 .control__input[type="checkbox"]:checked + .control__mark {
@@ -1016,12 +1102,36 @@ img {
   background-size: 18px 14px;
 }
 
+@media (width >= 768px) {
+  .control__input[type="checkbox"]:checked + .control__mark {
+    background-size: 24px 18px;
+  }
+}
+
+.control__input:hover + .control__mark {
+  cursor: pointer;
+  border-color: #bababa;
+}
+
+.control__input:focus + .control__mark {
+  border-color: #444;
+}
+
+.control__input:disabled, .control__input:disabled:hover, .control__input:disabled:focus, .control__input--disabled, .control__input--disabled:hover, .control__input--disabled:focus {
+  cursor: default;
+}
+
+.control__input:disabled + .control__mark, .control__input:disabled ~ .control__label, .control__input:disabled:hover + .control__mark, .control__input:disabled:hover ~ .control__label, .control__input:disabled:focus + .control__mark, .control__input:disabled:focus ~ .control__label, .control__input--disabled + .control__mark, .control__input--disabled ~ .control__label, .control__input--disabled:hover + .control__mark, .control__input--disabled:hover ~ .control__label, .control__input--disabled:focus + .control__mark, .control__input--disabled:focus ~ .control__label {
+  opacity: .3;
+}
+
 .copyright {
   justify-content: space-between;
   align-items: center;
   margin: 0;
   padding-top: 22px;
   padding-bottom: 5px;
+  text-decoration: none;
   display: flex;
 }
 
@@ -1331,7 +1441,7 @@ img {
     opacity: .24;
     background-image: linear-gradient(to right, #000 50%, #0000 50%);
     background-repeat: repeat-x;
-    background-size: 4px 2px;
+    background-size: 2px 1px;
     height: 5px;
     position: absolute;
     bottom: -5px;
@@ -1434,12 +1544,13 @@ img {
   font-size: 16px;
   line-height: 18px;
   display: flex;
+  position: relative;
 }
 
-@media (width >= 1280px) {
+@media (width >= 768px) {
   .field {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 100%;
   }
 }
 
@@ -1452,16 +1563,43 @@ img {
   border: 1px solid #e7e7e7;
   height: 100%;
   margin-left: 15px;
-  padding: 13px 15px;
+  padding: 13px 38px 13px 15px;
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   position: relative;
 }
 
+.field__input:hover {
+  cursor: pointer;
+  border: 1px solid #cdcdcd;
+}
+
+.field__input:focus {
+  border: 1px solid #444;
+  outline: 1px solid #444;
+}
+
+.field__input:focus::-webkit-input-placeholder {
+  color: #0000;
+}
+
+.field__input:focus + .field__input-icon {
+  background-color: #68b738;
+}
+
+.field__input--error, .field__input--error:focus {
+  border: 1px solid #ff8282;
+  outline: 1px solid #ff8282;
+}
+
+.field__input--error + .field__input-icon, .field__input--error:focus + .field__input-icon {
+  background-color: #ff8282;
+}
+
 @media (width >= 768px) {
   .field__input {
-    padding: 9px 20px;
+    padding: 9px 45px 9px 20px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -1494,22 +1632,50 @@ img {
   }
 }
 
-.field__input--email {
-  background-image: url("../icons/stack.svg#email_icon");
-  background-position: 95%;
-  background-repeat: no-repeat;
-  background-size: 20px 14px;
+.field__input-icon--email {
+  background-color: #222;
+  width: 20px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
+  -webkit-mask-image: url("../icons/stack.svg#email_icon");
+  mask-image: url("../icons/stack.svg#email_icon");
 }
 
-.field__input--phone {
-  background-image: url("../icons/stack.svg#phone_icon");
-  background-position: 95%;
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
+@media (width >= 768px) {
+  .field__input-icon--email {
+    right: 20px;
+  }
+}
+
+.field__input-icon--phone {
+  background-color: #222;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
+  -webkit-mask-image: url("../icons/stack.svg#phone_icon");
+  mask-image: url("../icons/stack.svg#phone_icon");
+}
+
+@media (width >= 768px) {
+  .field__input-icon--phone {
+    right: 20px;
+  }
 }
 
 .form {
   margin-bottom: 32px;
+}
+
+@media (width >= 768px) {
+  .form {
+    margin-bottom: 72px;
+  }
 }
 
 @media (width >= 1280px) {
@@ -1521,13 +1687,14 @@ img {
 @media (width >= 768px) {
   .form__container {
     flex-wrap: wrap;
+    padding: 0 70px;
     display: flex;
   }
 }
 
 @media (width >= 1280px) {
   .form__container {
-    gap: 70px 80px;
+    column-gap: 80px;
   }
 }
 
@@ -1537,8 +1704,10 @@ img {
   padding: 0;
 }
 
-.form__group:not(:first-of-type) {
-  padding-top: 22px;
+@media (width >= 768px) {
+  .form__group {
+    margin-bottom: 70px;
+  }
 }
 
 @media (width >= 1280px) {
@@ -1559,12 +1728,31 @@ img {
   }
 }
 
+.form__text {
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+}
+
+@media (width >= 768px) {
+  .form__text {
+    font-size: 20px;
+    line-height: 100%;
+  }
+}
+
 .form__button {
   box-sizing: border-box;
   border: none;
   min-width: 280px;
   margin-top: 34px;
   padding: 12px 26px;
+}
+
+@media (width >= 768px) {
+  .form__button {
+    margin-top: 0;
+  }
 }
 
 @media (width >= 1280px) {
@@ -1585,6 +1773,22 @@ img {
   }
 }
 
+@media (width >= 1280px) {
+  .form__note {
+    margin-left: 0;
+  }
+}
+
+sup {
+  font-size: inherit;
+  position: relative;
+  top: 2px;
+}
+
+.form__text {
+  display: flex;
+}
+
 .field-group {
   box-sizing: border-box;
   border: none;
@@ -1603,6 +1807,7 @@ img {
 }
 
 .field-group--target {
+  padding-top: 22px;
   padding-bottom: 25px;
   position: relative;
 }
@@ -1635,6 +1840,17 @@ img {
   margin-bottom: 16px;
 }
 
+@media (width >= 768px) {
+  .field-group--target {
+    border: 1px solid #e7e7e7;
+    padding-left: 28px;
+  }
+
+  .field-group--target:before, .field-group--target:after {
+    display: none;
+  }
+}
+
 .field-group--contacts {
   gap: 15px;
 }
@@ -1657,9 +1873,19 @@ img {
   display: flex;
 }
 
+@media (width >= 768px) {
+  .field-group--additional {
+    grid-template-columns: repeat(2, auto);
+    gap: 32px;
+    display: grid;
+  }
+}
+
 @media (width >= 1280px) {
   .field-group--additional {
-    column-gap: 104px;
+    grid-template-columns: repeat(4, auto);
+    gap: 32px 42px;
+    margin-bottom: 60px;
   }
 }
 
@@ -1679,23 +1905,7 @@ img {
   }
 }
 
-.field-group--has-border {
-  position: relative;
-}
-
-.field-group--has-border:before {
-  content: "";
-  z-index: -2;
-  background-color: #68b738;
-  height: 2px;
-  position: absolute;
-  top: -57px;
-  left: -20px;
-  right: -20px;
-}
-
 .field-group__title {
-  max-width: 200px;
   margin: 0 0 20px;
   font-family: Oswald, san-serif;
   font-size: 24px;
@@ -1709,6 +1919,10 @@ img {
     margin-bottom: 50px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  .field-group__title br {
+    display: none;
   }
 }
 
@@ -1897,7 +2111,6 @@ img {
 @media (width >= 768px) {
   .page-form {
     border: none;
-    padding-top: 65px;
   }
 }
 
@@ -1909,6 +2122,13 @@ img {
 
 .page-form__header {
   margin-bottom: 39px;
+}
+
+@media (width >= 768px) {
+  .page-form__header {
+    margin-bottom: 66px;
+    padding: 0 70px;
+  }
 }
 
 .page-form__title {
@@ -1923,7 +2143,7 @@ img {
 
 @media (width >= 768px) {
   .page-form__title {
-    margin-bottom: 56px;
+    margin-bottom: 54px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -1936,6 +2156,13 @@ img {
   font-family: Oswald, san-serif;
   font-size: 14px;
   line-height: 18px;
+}
+
+@media (width >= 768px) {
+  .page-form__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 @media (width >= 1280px) {
@@ -1975,7 +2202,7 @@ img {
 @media (width >= 1280px) {
   .products__list {
     grid-template-columns: repeat(4, minmax(245px, 1fr));
-    gap: 144px 80px;
+    gap: 60px 80px;
     max-width: 1220px;
     margin-inline: auto;
     padding: 0;
@@ -2344,8 +2571,9 @@ img {
   position: relative;
 }
 
-.programs__link[href]:hover {
-  opacity: .6;
+.programs__link[href]:hover:after {
+  width: 32px;
+  right: -8px;
 }
 
 .programs__link[href]:active {
@@ -2393,8 +2621,6 @@ img {
 
 @media (width >= 1280px) {
   .promo {
-    align-self: start;
-    width: 245px;
     padding: 185px 40px 42px;
   }
 }
@@ -2520,7 +2746,26 @@ img {
   line-height: 18px;
 }
 
-@media (width >= 1280px) {
+.textarea:hover {
+  cursor: pointer;
+  border: 1px solid #cdcdcd;
+}
+
+.textarea:focus {
+  border: 1px solid #444;
+  outline: 1px solid #444;
+}
+
+.textarea:focus::-webkit-input-placeholder {
+  color: #0000;
+}
+
+.textarea--error, .textarea--error:focus {
+  border: 1px solid #ff8282;
+  outline: 1px solid #ff8282;
+}
+
+@media (width >= 768px) {
   .textarea {
     min-height: 170px;
     padding: 10px 20px;
@@ -2537,7 +2782,7 @@ img {
   line-height: 18px;
 }
 
-@media (width >= 1280px) {
+@media (width >= 768px) {
   .textarea::placeholder {
     font-size: 20px;
     line-height: 30px;

@@ -18,7 +18,14 @@
       'details details'
       'button button';
     padding: 160px 36px 40px;
-    background-color: $color-very-light-grey;
+    background-image: linear-gradient(
+      to bottom,
+      $color-white 0%,
+      $color-white 80px,
+      $color-very-light-grey 80px,
+      $color-very-light-grey 100%
+    );
+    // background-color: $color-very-light-grey;
 
     @media (min-width: $desktop-width) {
       min-width: 245px;

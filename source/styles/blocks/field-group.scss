@@ -15,6 +15,7 @@
   &--target {
     position: relative;
     padding-bottom: 25px;
+    padding-top: 22px;
 
     &::before {
       content: '';
@@ -43,6 +44,16 @@
         margin-bottom: 16px;
       }
     }
+
+    @media (min-width: $tablet-width) {
+      padding-left: 28px;
+      border: 1px solid #e7e7e7;
+
+      &::before,
+      &:after {
+        display: none;
+      }
+    }
   }
 
   &--contacts {
@@ -62,8 +73,16 @@
     flex-wrap: wrap;
     gap: 15px;
 
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 32px;
+    }
+
     @media (min-width: $desktop-width) {
-      column-gap: 104px;
+      margin-bottom: 60px;
+      grid-template-columns: repeat(4, auto);
+      gap: 32px 42px;
     }
 
     & .control {
@@ -79,28 +98,7 @@
     }
   }
 
-  &--has-border {
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      top: -57px;
-      right: -20px;
-      left: -20px;
-      height: 2px;
-      background-color: $color-basic;
-      z-index: -2;
-    }
-
-    & .field-group__title {
-      position: relative;
-      background-color: #fff;
-      z-index: 2;
-    }
-  }
-
   &__title {
-    max-width: 200px;
     margin: 0;
     margin-bottom: 20px;
     position: relative;
@@ -113,14 +111,10 @@
       margin-bottom: 50px;
       font-size: 36px;
       line-height: 36px;
+
+      & br {
+        display: none;
+      }
     }
-
-    // &::before {
-    //   @include title-border-left;
-    // }
-
-    // &::after {
-    //   @include title-border-right;
-    // }
   }
 }

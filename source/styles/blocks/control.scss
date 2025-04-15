@@ -3,9 +3,18 @@
   position: relative;
   padding-left: 45px;
   display: flex;
-  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+    padding-left: 60px;
+  }
 
   &__label {
+    padding-top: 5px;
     font-family: $font-secondary;
     font-size: 16px;
     line-height: 18px;
@@ -24,13 +33,18 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     border: 1px solid #cdcdcd;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: $tablet-width) {
+      width: 38px;
+      height: 38px;
+    }
   }
 }
 
@@ -42,6 +56,11 @@
     width: 13.5px;
     height: 13.5px;
     background-color: $color-basic;
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 
@@ -50,12 +69,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     border: 1px solid #cdcdcd;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: $tablet-width) {
+      width: 38px;
+      height: 38px;
+    }
   }
 }
 
@@ -65,5 +89,38 @@
     background-repeat: no-repeat;
     background-size: 18px 14px;
     background-position: center;
+
+    @media (min-width: $tablet-width) {
+      background-size: 24px 18px;
+    }
+  }
+}
+
+.control__input {
+  &:hover {
+    & + .control__mark {
+      cursor: pointer;
+      border-color: #bababa;
+    }
+  }
+
+  &:focus {
+    & + .control__mark {
+      border-color: $color-dark-grey;
+    }
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus,
+  &--disabled,
+  &--disabled:hover,
+  &--disabled:focus {
+    cursor: default;
+
+    & + .control__mark,
+    & ~ .control__label {
+      opacity: 0.3;
+    }
   }
 }

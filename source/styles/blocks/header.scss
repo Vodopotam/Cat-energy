@@ -15,10 +15,6 @@
     @media (min-width: $tablet-width) {
       min-height: 78px;
       padding-top: 12px;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-      // right: 0;
       box-sizing: border-box;
       display: flex;
       justify-content: space-between;
@@ -26,10 +22,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-      // right: 0;
+      padding-top: 30px;
     }
   }
 

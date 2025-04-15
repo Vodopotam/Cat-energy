@@ -1,4 +1,5 @@
 .field {
+  position: relative;
   display: flex;
   align-items: center;
   font-family: $font-secondary;
@@ -7,16 +8,16 @@
   color: $color-dark-grey;
   text-transform: uppercase;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 100%;
   }
 
   &__input {
     position: relative;
     height: 100%;
     margin-left: 15px;
-    padding: 13px 15px;
+    padding: 13px 38px 13px 15px;
     font-family: inherit;
     font-size: 16px;
     line-height: 18px;
@@ -26,8 +27,36 @@
     border: 1px solid #e7e7e7;
     box-sizing: border-box;
 
+    &:hover {
+      cursor: pointer;
+      border: 1px solid #cdcdcd;
+    }
+
+    &:focus {
+      border: 1px solid $color-dark-grey;
+      outline: 1px solid $color-dark-grey;
+
+      &::-webkit-input-placeholder {
+        color: transparent;
+      }
+
+      & + .field__input-icon {
+        background-color: $color-basic;
+      }
+    }
+
+    &--error,
+    &--error:focus {
+      border: 1px solid $color-error;
+      outline: 1px solid $color-error;
+
+      & + .field__input-icon {
+        background-color: $color-error;
+      }
+    }
+
     @media (min-width: $tablet-width) {
-      padding: 9px 20px;
+      padding: 9px 45px 9px 20px;
       font-size: 20px;
       line-height: 30px;
     }
@@ -50,19 +79,37 @@
         line-height: 30px;
       }
     }
+  }
 
+  &__input-icon {
     &--email {
-      background-image: url('../../icons/email_icon.svg');
-      background-repeat: no-repeat;
-      background-position: 95% center;
-      background-size: 20px 14px;
+      position: absolute;
+      right: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 14px;
+      background-color: $color-darker-grey;
+      mask-image: url('../../icons/email_icon.svg');
+
+      @media (min-width: $tablet-width) {
+        right: 20px;
+      }
     }
 
     &--phone {
-      background-image: url('../../icons/phone_icon.svg');
-      background-repeat: no-repeat;
-      background-position: 95% center;
-      background-size: 20px 20px;
+      position: absolute;
+      right: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-color: $color-darker-grey;
+      mask-image: url('../../icons/phone_icon.svg');
+
+      @media (min-width: $tablet-width) {
+        right: 20px;
+      }
     }
   }
 }

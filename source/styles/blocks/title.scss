@@ -1,0 +1,49 @@
+.title {
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+  }
+  &--has-border {
+    position: relative;
+    width: 100%;
+    display: flex;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(26px / 2);
+      right: -20px;
+      left: -20px;
+      height: 2px;
+      background-color: $color-basic;
+      z-index: -2;
+
+      @media (min-width: $tablet-width) {
+        top: calc(36px / 2);
+        left: -70px;
+        right: -70px;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: -400px;
+        right: -400px;
+      }
+    }
+
+    & .title__content {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -40px;
+        right: -40px;
+        height: 100%;
+        background-color: $color-white;
+        z-index: -1;
+
+        @media (min-width: $tablet-width) {
+        }
+      }
+    }
+  }
+}

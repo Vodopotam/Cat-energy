@@ -1,18 +1,23 @@
 .form {
   margin-bottom: 32px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 82px;
   }
 
   &__container {
     @media (min-width: $tablet-width) {
+      padding: 0 70px;
       display: flex;
       flex-wrap: wrap;
     }
 
     @media (min-width: $desktop-width) {
-      gap: 70px 80px;
+      column-gap: 80px;
     }
   }
 
@@ -22,9 +27,12 @@
     margin: 0;
     margin-bottom: 25px;
 
-    &:not(:first-of-type) {
-      padding-top: 22px;
+    @media (min-width: $tablet-width) {
+      margin-bottom: 70px;
     }
+    // &:not(:first-of-type) {
+    //   padding-top: 22px;
+    // }
 
     &--half-width {
       @media (min-width: $desktop-width) {
@@ -45,12 +53,27 @@
     }
   }
 
+  &__text {
+    display: flex;
+    font-size: 16px;
+    line-height: 18px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 100%;
+    }
+  }
+
   &__button {
     min-width: 280px;
     margin-top: 34px;
     padding: 12px 26px;
     border: none;
     box-sizing: border-box;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+    }
 
     @media (min-width: $desktop-width) {
       min-width: 568px;
@@ -65,5 +88,19 @@
       margin-left: 60px;
       font-size: 16px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 0;
+    }
   }
+}
+
+sup {
+  position: relative;
+  font-size: inherit;
+  top: 2px;
+}
+
+.form__text {
+  display: flex;
 }

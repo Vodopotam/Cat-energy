@@ -35,19 +35,13 @@
         <nav class="header__nav nav nav--closed nav--nojs">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link nav__link--color-black" href="./index.html"
-                >Главная</a
-              >
+              <a class="nav__link" href="./index.html">Главная</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link nav__link--color-black" href="./catalog.html"
-                >Каталог продукции</a
-              >
+              <a class="nav__link" href="./catalog.html">Каталог продукции</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link nav__link--color-black nav__link--current"
-                >Подбор программы</a
-              >
+              <a class="nav__link nav__link--current">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -141,40 +135,49 @@
               </label>
             </fieldset>
 
-            <fieldset
-              class="form__group field-group field-group--contacts field-group--has-border"
-            >
-              <legend class="field-group__title">
-                Контактные данные (владельца кота)
-              </legend>
+            <fieldset class="form__group field-group field-group--contacts">
+              <div class="title title--has-border">
+                <legend class="field-group__title title__content">
+                  Контактные данные <br />(владельца кота)
+                </legend>
+              </div>
+
               <label class="form__label form__label--half-width field">
-                E-mail:*
+                <div class="form__text">E-mail:<sup> *</sup></div>
+
                 <input
-                  class="field__input field__input--email"
+                  class="field__input"
                   type="email"
                   name="email"
                   placeholder="kuklachev@gmail.com"
                   id="email"
                   required
                 />
+                <div class="field__input-icon field__input-icon--email"></div>
               </label>
               <label class="form__label form__label--half-width field">
-                Телефон:*
+                <div class="form__text">Телефон:<sup> *</sup></div>
                 <input
-                  class="field__input field__input--phone"
+                  class="field__input"
                   type="tel"
                   name="tel"
                   placeholder="8 (960) 900-60-90"
                   id="tel"
                   required
                 />
+                <div class="field__input-icon field__input-icon--phone"></div>
               </label>
             </fieldset>
 
             <fieldset class="form__group field-group">
-              <legend class="field-group__title">Комментарий</legend>
+              <div class="title title--has-border">
+                <legend class="field-group__title title__content">
+                  Комментарий
+                </legend>
+              </div>
+
               <textarea
-                class="form__group textarea"
+                class="textarea"
                 name="comment"
                 id="comment"
                 cols="5"
@@ -183,7 +186,12 @@
             </fieldset>
 
             <fieldset class="form__group field-group field-group--additional">
-              <legend class="field-group__title">Дополнительно</legend>
+              <div class="title title--has-border">
+                <legend class="field-group__title title__content">
+                  Дополнительно
+                </legend>
+              </div>
+
               <label class="control">
                 <input
                   class="control__input visually-hidden"
@@ -233,7 +241,7 @@
             <button class="form__button button" type="submit">
               Отправить заявку
             </button>
-            <p class="form__note">* — Обязательные поля</p>
+            <p class="form__note"><sup>*</sup> — Обязательные поля</p>
           </div>
         </form>
       </section>
@@ -286,11 +294,11 @@
             </li>
           </ul>
         </div>
-        <p class="copyright">
+        <a class="copyright" target="_blank" href="htmlacademy.ru">
           <span class="visually-hidden">Разработано в</span>
           <span class="copyright__text">HTML Academy</span>
           <span class="copyright__icon"></span>
-        </p>
+        </a>
       </div>
     </footer>
 

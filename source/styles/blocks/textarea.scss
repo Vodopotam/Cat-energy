@@ -10,7 +10,27 @@
   border: 1px solid #e7e7e7;
   resize: none;
 
-  @media (min-width: $desktop-width) {
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 1px solid $color-dark-grey;
+    outline: 1px solid $color-dark-grey;
+
+    &::-webkit-input-placeholder {
+      color: transparent;
+    }
+  }
+
+  &--error,
+  &--error:focus {
+    border: 1px solid $color-error;
+    outline: 1px solid $color-error;
+  }
+
+  @media (min-width: $tablet-width) {
     min-height: 170px;
     padding: 10px 20px;
     font-size: 20px;
@@ -24,7 +44,7 @@
     color: $color-dark-grey;
     text-transform: uppercase;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       font-size: 20px;
       line-height: 30px;
     }

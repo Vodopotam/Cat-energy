@@ -21,6 +21,7 @@
 
     @media (min-width: $desktop-width) {
       border-top: none;
+      padding-top: 0;
 
       &::after {
         top: 180px;
@@ -52,6 +53,7 @@
 
     @media (min-width: $desktop-width) {
       margin-bottom: 76px;
+      padding-top: 43px;
       grid-column: 1 / 2;
       grid-row: 1/ 2;
     }

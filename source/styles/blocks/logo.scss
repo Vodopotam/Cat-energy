@@ -1,13 +1,19 @@
 .logo {
-  // display: flex;
-  // align-items: center;
   &__img {
     @media (min-width: $tablet-width) {
       margin-right: 12px;
     }
 
     @media (min-width: $desktop-width) {
+      width: 202px;
+      height: 59px;
       margin-right: 14px;
+    }
+  }
+
+  &__text {
+    @media (min-width: $tablet-width) {
+      display: none;
     }
   }
 

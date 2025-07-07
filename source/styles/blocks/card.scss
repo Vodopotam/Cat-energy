@@ -1,23 +1,29 @@
 .card {
   min-width: 280px;
+  margin: 0 auto;
   position: relative;
   display: grid;
-  grid-template-columns: 140px auto;
+  justify-content: space-between;
+  // grid-template-columns: 140px auto;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
     'image title'
     'image details'
     'button button';
+  column-gap: 20px;
   padding: 20px 20px 25px;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   border-bottom: 1px solid #ebebeb;
 
   @media (min-width: $tablet-width) {
+    min-width: 324px;
     grid-template-areas:
       'image image'
       'title title'
       'details details'
       'button button';
-    padding: 160px 36px 40px;
+    padding: 10px 36px 40px;
+    box-sizing: border-box;
     background-image: linear-gradient(
       to bottom,
       $color-white 0%,
@@ -64,19 +70,37 @@
     color: $color-dark-grey;
   }
 
-  &__img {
+  &__img-wrapper {
     grid-area: image;
+    margin: auto;
+
+    @media (min-width: $tablet-width) {
+      height: 200px;
+      margin-bottom: 35px;
+      display: flex;
+      align-items: end;
+    }
+  }
+
+  &__img {
+    @media (min-width: $tablet-width) {
+      margin-top: auto;
+    }
   }
 
   &__details {
     // margin-bottom: 33px;
+    margin: 0;
     grid-area: details;
     // gap: 16px;
+    width: 150px;
     font-size: 12px;
     line-height: 16px;
     color: $color-dark-grey;
 
     @media (min-width: $tablet-width) {
+      width: 100%;
+      margin-bottom: 20px;
       font-size: 16px;
     }
   }
@@ -99,6 +123,7 @@
   }
 
   &__button {
+    width: 100%;
     grid-area: button;
     margin: 0 auto;
     margin-top: 13px;

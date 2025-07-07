@@ -11,10 +11,13 @@
 
     @media (min-width: $tablet-width) {
       text-align: left;
-      padding-left: 100px;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, auto);
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 510px auto;
     }
   }
 
@@ -31,9 +34,15 @@
       grid-column: 1 / -1;
       grid-row: 1 / 2;
       margin-bottom: 40px;
+      padding-left: 87px;
       font-size: 60px;
       line-height: 60px;
       color: $color-black;
+    }
+
+    @media (min-width: $desktop-width) {
+      box-sizing: border-box;
+      grid-column: 1 / 2;
     }
   }
 
@@ -47,19 +56,43 @@
     color: $color-white;
 
     @media (min-width: $tablet-width) {
+      padding-left: 87px;
       margin-bottom: 50px;
       font-size: 20px;
       line-height: 20px;
       color: $color-black;
-      // grid-column: 1 / -1;
-      // grid-row: 2/ 3;
+      grid-column: 1 / -1;
+      grid-row: 2/ 3;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / 2;
+    }
+  }
+
+  & picture {
+    @media (min-width: $tablet-width) {
+      margin-top: 35px;
+      z-index: -1;
+      grid-column: 1 / -1;
+      grid-row: 2/ 5;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -70px;
+      margin-left: -62px;
+      grid-column: 2 / 3;
+      grid-row: 1 / -1;
+      z-index: 1;
     }
   }
 
   &__product {
     @media (min-width: $tablet-width) {
-      grid-column: 1 / -1;
-      grid-row: 3/ 5;
+      // // display: subgrid;
+      // margin-top: -20px;
+      // grid-column: 1 / -1;
+      // grid-row: 2/ 5;
     }
   }
 
@@ -69,7 +102,11 @@
     @media (min-width: $tablet-width) {
       grid-column: 1 / -1;
       grid-row: 3/ 4;
-      margin-left: 0;
+      margin-left: 87px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / 2;
     }
   }
 }

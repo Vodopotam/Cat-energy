@@ -3,7 +3,7 @@
   min-height: 360px;
 
   @media (min-width: $tablet-width) {
-    height: 400px;
+    // height: 400px;
   }
 
   @media (min-width: $desktop-width) {
@@ -19,10 +19,12 @@
 
   &__container {
     @media (min-width: $desktop-width) {
+      position: relative;
       height: 100%;
       display: flex;
       justify-content: start;
       align-items: center;
+      z-index: 3;
       // grid-row: 1 / -1;
       // grid-column: 1 / -1;
       // z-index: 2;
@@ -47,8 +49,9 @@
     @media (min-width: $desktop-width) {
       max-width: 565px;
       padding: 56px 80px;
-      outline: 1px solid green;
+      margin-top: 95px;
       gap: 85px;
+      background-color: #fff;
     }
   }
 
@@ -85,6 +88,12 @@
   }
 
   &__map {
+    @media (min-width: $tablet-width) {
+      & iframe {
+        height: 400px;
+      }
+    }
+
     @media (min-width: $desktop-width) {
       position: absolute;
       top: 0;

@@ -9,12 +9,14 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-      '. .'
+      // '. .'
+
       'title title'
       'text text'
       'button button';
     justify-content: center;
     padding-top: 161px;
+    margin-top: 80px;
     background-image: none;
     border: 2px solid $color-very-light-grey;
   }

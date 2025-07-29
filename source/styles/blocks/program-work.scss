@@ -3,11 +3,11 @@
   margin-bottom: 50px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 42px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 90px;
+    margin-bottom: 26px;
   }
   // }
 
@@ -35,7 +35,7 @@
     @media (min-width: $desktop-width) {
       margin-right: 0;
       grid-template-columns: repeat(4, minmax(248, 1fr));
-      gap: 80px;
+      gap: 77px;
     }
   }
 
@@ -46,7 +46,7 @@
     counter-increment: number;
 
     @media (min-width: $tablet-width) {
-      padding: 150px 0 58px;
+      padding: 152px 0 58px;
 
       &::after {
         content: counter(number);

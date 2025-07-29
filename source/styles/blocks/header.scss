@@ -11,18 +11,19 @@
 
   &__container {
     position: relative;
+    min-height: 65px;
 
     @media (min-width: $tablet-width) {
       min-height: 78px;
-      padding-top: 12px;
+      padding-top: 27px;
       box-sizing: border-box;
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
       align-items: center;
     }
 
     @media (min-width: $desktop-width) {
-      padding-top: 30px;
+      padding-top: 53px;
     }
   }
 
@@ -45,6 +46,14 @@
     align-items: center;
     @media (min-width: $tablet-width) {
       width: auto;
+    }
+  }
+
+  &__nav {
+    margin-left: 92px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: auto;
     }
   }
 

@@ -1,12 +1,16 @@
 .main {
   &__header {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
 
     @media (min-width: $desktop-width) {
       margin-bottom: 82px;
       padding-top: 223px;
-      padding-bottom: 55px;
+      padding-bottom: 47px;
     }
 
     &::after {

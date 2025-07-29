@@ -1,7 +1,7 @@
 .social {
   &__list {
     margin: 0;
-    padding: 10px 0;
+    padding: 15px 0;
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -10,54 +10,66 @@
     border-bottom: 1px solid #d9d9d9;
 
     @media (min-width: $tablet-width) {
+      // padding: 10px 0;
       border: none;
     }
   }
 
   &__link {
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 33px;
+    height: 33px;
+    color: #666;
 
-    &:hover::before {
-      background-color: $color-basic;
+    &:hover {
+      color: $color-basic;
     }
 
-    &:active::before {
-      background-color: $color-basic;
+    &--active {
       opacity: 0.3;
+
+      color: $color-basic;
     }
 
     @media (min-width: $tablet-width) {
       transform: scale(1.4);
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #666666;
-    }
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   background-color: #666666;
+    // }
 
-    &--vk::before {
-      width: 20px;
-      height: 12.36px;
-      mask-image: url('../../icons/vk.svg');
-    }
+    // &--vk::before {
+    //   width: 20px;
+    //   height: 12.36px;
+    //   mask-image: url('../../icons/vk.svg');
+    // }
 
-    &--instagram::before {
-      width: 16px;
-      height: 16px;
-      mask-image: url('../../icons/instagram.svg');
-    }
+    // &--instagram::before {
+    //   width: 16px;
+    //   height: 16px;
+    //   mask-image: url('../../icons/instagram.svg');
+    // }
 
-    &--facebook::before {
-      width: 9.5px;
-      height: 18px;
-      mask-image: url('../../icons/facebook.svg');
-    }
+    // &--facebook::before {
+    //   width: 9.5px;
+    //   height: 18px;
+    //   mask-image: url('../../icons/facebook.svg');
+    // }
+  }
+
+  &__icon {
+    color: inherit;
+
+    // &:hover {
+    //   color: $color-basic;
+    // }
   }
 }

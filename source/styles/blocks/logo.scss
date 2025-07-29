@@ -1,4 +1,36 @@
 .logo {
+  // width: 100px;
+  // height: 100px;
+  @media (min-width: $tablet-width) {
+    width: 175px;
+    height: 52px;
+  }
+
+  &__mobile {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__tablet {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
   &__img {
     @media (min-width: $tablet-width) {
       margin-right: 12px;
@@ -12,8 +44,15 @@
   }
 
   &__text {
-    @media (min-width: $tablet-width) {
-      display: none;
+    &--header {
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+
+    &--footer {
+      width: 128px;
+      height: 24px;
     }
   }
 

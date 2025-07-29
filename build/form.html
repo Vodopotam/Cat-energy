@@ -18,12 +18,19 @@
       <div class="header__container wrapper">
         <div class="header__bar">
           <a class="header__logo logo" href="./index.html">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="images/logo_desktop.svg" width="175" height="52">
-              <source media="(min-width: 768px)" srcset="images/logo_tablet.svg" width="175" height="52">
-              <img class="logo__img" src="images/logo_mobile.svg" width="34" height="38" alt="Логотип Компании">
-            </picture>
-            <img class="logo__text" src="images/logo_text.svg" width="101" height="18" alt="Логотип Компании">
+            <svg class="logo__mobile" viewBox="0 0 34 38" width="34" height="38">
+              <use xlink:href="images/logo.svg#logo-mobile"></use>
+            </svg>
+            <svg class="logo__tablet" viewBox="0 0 175 52" width="175" height="52">
+              <use xlink:href="images/logo.svg#logo-tablet"></use>
+            </svg>
+            <svg class="logo__desktop" viewBox="0 0 202 60" width="202" height="60">
+              <use xlink:href="images/logo.svg#logo-desktop"></use>
+            </svg>
+
+            <svg class="logo__text logo__text--header" viewBox="0 0 101 18" width="101" height="18">
+              <use xlink:href="images/logo.svg#logo-text"></use>
+            </svg>
           </a>
           <button class="header__toggler header__toggler--closed">
             <span class="visually-hidden">Открыть меню</span>
@@ -163,7 +170,7 @@
           <div class="contacts__info">
             <h2 class="visually-hidden">Контакты</h2>
             <p class="contacts__heading">
-              приглашаем к сотрудничеству дилеров!
+              приглашаем <br>к сотрудничеству <br>дилеров!
             </p>
             <p class="contacts__address">
               ул. Большая<br>Конюшенная, д. 19/8<br><span class="contacts__address-city">Санкт-Петербург</span>
@@ -179,23 +186,33 @@
     <footer class="footer">
       <div class="footer__container wrapper">
         <a class="footer__logo logo" href="./index.html">
-          <img width="128" height="24" src="images/logo_text.svg" alt="Логотип компании">
+          <svg class="logo__text logo__text--footer" viewBox="0 0 101 18" width="101" height="18">
+            <use xlink:href="images/logo.svg#logo-text"></use>
+          </svg>
         </a>
         <div class="social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vk" href="#">
                 <span class="visually-hidden">ВКонтакте</span>
+                <svg class="social__icon" viewBox="0 0 20 13" width="20" height="13">
+                  <use xlink:href="icons/stack.svg#vk"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--instagram" href="#">
                 <span class="visually-hidden">Instagram</span>
+                <svg class="social__icon" width="16" height="16">
+                  <use xlink:href="icons/stack.svg#instagram"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">
-                <span class="visually-hidden">Facebook</span>
+              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Facebook</span>
+                <svg class="social__icon" width="9.5" height="18">
+                  <use xlink:href="icons/stack.svg#facebook"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -203,7 +220,9 @@
         <a class="copyright" target="_blank" href="htmlacademy.ru">
           <span class="visually-hidden">Разработано в</span>
           <span class="copyright__text">HTML Academy</span>
-          <span class="copyright__icon"></span>
+          <svg class="copyright__icon" viewBox="0 0 27 34" width="27" height="34">
+            <use xlink:href="icons/stack.svg#html_academy"></use>
+          </svg>
         </a>
       </div>
     </footer>

@@ -11,14 +11,14 @@
     cursor: pointer;
 
     & .copyright__icon {
-      background-color: $color-basic;
+      color: $color-basic;
     }
   }
 
   &:active {
     opacity: 0.3;
     & .copyright__icon {
-      background-color: $color-basic;
+      color: $color-basic;
     }
   }
 
@@ -39,7 +39,6 @@
   &__icon {
     width: 27px;
     height: 34px;
-    background-color: #666666;
-    mask-image: url('../../icons/html_academy.svg');
+    color: #666;
   }
 }

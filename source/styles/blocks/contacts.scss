@@ -4,6 +4,7 @@
 
   @media (min-width: $tablet-width) {
     // height: 400px;
+    min-height: 400px;
   }
 
   @media (min-width: $desktop-width) {
@@ -18,6 +19,7 @@
   }
 
   &__container {
+    pointer-events: none;
     @media (min-width: $desktop-width) {
       position: relative;
       height: 100%;
@@ -41,16 +43,16 @@
     box-sizing: border-box;
 
     @media (min-width: $tablet-width) {
-      padding: 56px 50px;
+      padding: 59px 40px;
       grid-template-columns: repeat(2, 170);
       justify-content: space-between;
     }
 
     @media (min-width: $desktop-width) {
       max-width: 565px;
-      padding: 56px 80px;
+      padding: 59px 80px;
       margin-top: 95px;
-      gap: 85px;
+      gap: 81px;
       background-color: #fff;
     }
   }
@@ -77,6 +79,10 @@
     @media (min-width: $tablet-width) {
       font-size: 16px;
       text-align: right;
+    }
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
     }
   }
 

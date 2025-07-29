@@ -7,7 +7,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
+    margin-bottom: 73px;
     // }
   }
 
@@ -36,7 +36,7 @@
     background-color: $color-very-light-grey;
 
     @media (min-width: $tablet-width) {
-      padding: 77px calc(100% - 340px - 50px) 55px 50px;
+      padding: 76px calc(100% - 340px - 53px) 56px 53px;
     }
 
     @media (min-width: $desktop-width) {
@@ -144,8 +144,9 @@
     text-transform: uppercase;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 24px;
+      margin-bottom: 25px;
       padding-left: 0;
+      margin-left: 0;
       font-size: 36px;
     }
 
@@ -160,11 +161,11 @@
     // padding-bottom: 23px;
 
     &:last-of-type {
-      padding-bottom: 23px;
+      padding-bottom: 22px;
       border-bottom: 1px solid #d9d9d9;
 
       @media (min-width: $tablet-width) {
-        padding-bottom: 33px;
+        padding-bottom: 34px;
         border-bottom: none;
       }
 
@@ -181,15 +182,26 @@
   &__link {
     position: relative;
     display: inline-block;
-    padding-top: 15px;
+    padding-top: 18px;
     padding-right: 40px;
     font-family: $font-secondary;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 16px;
     text-transform: uppercase;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      padding-right: 49px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 17px;
+      padding-right: 52px;
+    }
 
     &[href]:hover {
       // opacity: 0.6;

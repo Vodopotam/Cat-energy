@@ -7,25 +7,27 @@
     text-align: center;
 
     @media (min-width: $tablet-width) {
-      padding-top: 36px;
-      padding-bottom: 36px;
+      padding-top: 45px;
+      padding-bottom: 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     @media (min-width: $desktop-width) {
-      padding-top: 44px;
-      padding-bottom: 44px;
+      padding-top: 43px;
     }
   }
 
   &__logo {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 20px 0 30px;
     // justify-content: center;
 
     @media (min-width: $tablet-width) {
+      justify-content: start;
       padding: 0;
     }
   }

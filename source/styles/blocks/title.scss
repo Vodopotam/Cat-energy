@@ -18,7 +18,7 @@
       z-index: -2;
 
       @media (min-width: $tablet-width) {
-        top: calc(36px / 2);
+        top: calc(44px / 2);
         left: -70px;
         right: -70px;
       }
@@ -36,12 +36,13 @@
         position: absolute;
         top: 0;
         left: -40px;
-        right: -40px;
+        right: -20px;
         height: 100%;
         background-color: $color-white;
         z-index: -1;
 
         @media (min-width: $tablet-width) {
+          right: -40px;
         }
       }
     }

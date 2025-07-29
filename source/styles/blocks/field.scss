@@ -16,8 +16,8 @@
   &__input {
     position: relative;
     height: 100%;
-    margin-left: 15px;
-    padding: 13px 38px 13px 15px;
+    margin-left: 13px;
+    padding: 9px 20px 11px 15px;
     font-family: inherit;
     font-size: 16px;
     line-height: 18px;
@@ -26,6 +26,13 @@
     appearance: textfield;
     border: 1px solid #e7e7e7;
     box-sizing: border-box;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      padding: 9px 38px 11px 18px;
+      margin-left: 20px;
+    }
 
     &:hover {
       cursor: pointer;
@@ -55,11 +62,11 @@
       }
     }
 
-    @media (min-width: $tablet-width) {
-      padding: 9px 45px 9px 20px;
-      font-size: 20px;
-      line-height: 30px;
-    }
+    // @media (min-width: $tablet-width) {
+    //   padding: 9px 45px 9px 20px;
+    //   font-size: 20px;
+    //   line-height: 30px;
+    // }
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
@@ -93,7 +100,7 @@
       mask-image: url('../../icons/email_icon.svg');
 
       @media (min-width: $tablet-width) {
-        right: 20px;
+        right: 14px;
       }
     }
 
@@ -108,7 +115,7 @@
       mask-image: url('../../icons/phone_icon.svg');
 
       @media (min-width: $tablet-width) {
-        right: 20px;
+        right: 14px;
       }
     }
   }

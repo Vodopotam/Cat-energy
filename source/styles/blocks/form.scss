@@ -28,6 +28,10 @@
     margin-bottom: 25px;
 
     @media (min-width: $tablet-width) {
+      margin-bottom: 73px;
+    }
+
+    @media (min-width: $desktop-width) {
       margin-bottom: 70px;
     }
     // &:not(:first-of-type) {
@@ -70,9 +74,12 @@
     padding: 12px 26px;
     border: none;
     box-sizing: border-box;
+    font-size: 16px;
+    letter-spacing: 0;
 
     @media (min-width: $tablet-width) {
       margin-top: 0;
+      font-size: 20px;
     }
 
     @media (min-width: $desktop-width) {
@@ -81,11 +88,13 @@
   }
 
   &__note {
+    text-align: center;
     font-size: 14px;
     color: $color-black;
 
     @media (min-width: $tablet-width) {
-      margin-left: 60px;
+      margin-left: 64px;
+      margin-top: 6px;
       font-size: 16px;
     }
 

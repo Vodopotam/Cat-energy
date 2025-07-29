@@ -50,7 +50,9 @@
   }
 
   &__nav {
-    margin-left: 92px;
+    @media (min-width: $tablet-width) {
+      margin-left: 92px;
+    }
 
     @media (min-width: $desktop-width) {
       margin-left: auto;

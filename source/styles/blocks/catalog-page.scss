@@ -20,9 +20,12 @@
 
     @media (min-width: $tablet-width) {
       margin-bottom: 82px;
-      // padding-bottom: 84px;
       font-size: 60px;
       line-height: 60px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 84px;
     }
   }
 }

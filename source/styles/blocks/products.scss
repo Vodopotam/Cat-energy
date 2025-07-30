@@ -6,6 +6,10 @@
     border-top: none;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 53px;
+  }
+
   &__list {
     margin: 0;
     padding: 0;
@@ -15,7 +19,7 @@
       padding: 0 30px;
       display: grid;
       grid-template-columns: repeat(2, minmax(324px, 1fr));
-      gap: 60px;
+      gap: 58px 61px;
     }
 
     @media (min-width: $desktop-width) {

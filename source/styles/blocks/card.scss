@@ -4,15 +4,14 @@
   position: relative;
   display: grid;
   justify-content: space-between;
-  // grid-template-columns: 140px auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 140px auto;
+  // grid-template-columns: 1fr 1fr;
   grid-template-areas:
     'image title'
     'image details'
     'button button';
-  column-gap: 20px;
-  padding: 20px 20px 25px;
-  // box-sizing: border-box;
+  // column-gap: 20px;
+  padding: 18px 20px 25px;
   border-bottom: 1px solid #ebebeb;
 
   @media (min-width: $tablet-width) {
@@ -22,7 +21,7 @@
       'title title'
       'details details'
       'button button';
-    padding: 10px 36px 40px;
+    padding: 16px 39px 39px;
     box-sizing: border-box;
     background-image: linear-gradient(
       to bottom,
@@ -35,14 +34,14 @@
 
     @media (min-width: $desktop-width) {
       min-width: 245px;
-      padding-left: 40px;
+      // padding: 16px 30px 39px 40px;
     }
   }
 
   &__title {
     max-width: 80px;
     margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: 13px;
     grid-area: title;
     font-family: $font-secondary;
     font-size: 16px;
@@ -76,9 +75,14 @@
 
     @media (min-width: $tablet-width) {
       height: 200px;
-      margin-bottom: 35px;
+      margin-bottom: 26px;
       display: flex;
       align-items: end;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 192px;
+      margin-bottom: 34px;
     }
   }
 
@@ -93,14 +97,14 @@
     margin: 0;
     grid-area: details;
     // gap: 16px;
-    width: 150px;
+    width: 140px;
     font-size: 12px;
     line-height: 16px;
     color: $color-dark-grey;
 
     @media (min-width: $tablet-width) {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       font-size: 16px;
     }
   }
@@ -108,10 +112,10 @@
   &__row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2px;
+    // margin-bottom: 2px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 5px;
+      margin-bottom: 7px;
       padding-bottom: 8px;
       border-bottom: 1px solid $color-light-grey;
     }
@@ -126,12 +130,14 @@
     width: 100%;
     grid-area: button;
     margin: 0 auto;
-    margin-top: 13px;
+    margin-top: 21px;
     font-size: 16px;
 
     @media (min-width: $tablet-width) {
       width: 100%;
       align-self: flex-end;
+      padding: 11px 26px;
+      margin-top: auto;
     }
 
     @media (min-width: $desktop-width) {

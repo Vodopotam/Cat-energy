@@ -1,6 +1,6 @@
 .additional-products {
   position: relative;
-  padding-top: 25px;
+  padding-top: 22px;
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
@@ -39,15 +39,16 @@
 
   &__info {
     width: 100%;
+
     @media (min-width: $desktop-width) {
       display: grid;
-      grid-template-columns: auto 250px;
-      gap: 80px;
+      grid-template-columns: auto 245px;
+      gap: 75px 79px;
     }
   }
 
   &__title {
-    margin: 0 20px 36px 0;
+    margin: 0 20px 35px 0;
     position: relative;
     display: inline-block;
     padding: 0;
@@ -79,8 +80,8 @@
       background-color: $color-white;
       z-index: -1;
 
-      @media (min-width: $tablet-width) {
-        // right: -40px;
+      @media (min-width: $desktop-width) {
+        inset: 0 -35px;
       }
     }
   }
@@ -98,7 +99,7 @@
     @media (min-width: $tablet-width) {
       margin-bottom: 70px;
       border: 1px solid $color-light-grey;
-      padding: 0 38px;
+      // padding: 0 38px;
     }
 
     @media (min-width: $desktop-width) {
@@ -115,17 +116,18 @@
     border-bottom: 1px solid $color-light-grey;
 
     @media (min-width: $tablet-width) {
-      padding: 26px 0 28px;
+      padding: 25px 38px 27px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       justify-content: space-between;
-      gap: 25px;
+      gap: 21px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 15px 0 17px;
-      // grid-template-columns: 300px 200px 244px;
-      column-gap: 40px;
+      padding: 15px 0 16px;
+      // grid-template-columns: repeat(3, 1fr);
+      // grid-template-columns: auto 288px 244px;
+      // column-gap: 40px;
       align-items: center;
     }
   }

@@ -6,6 +6,11 @@
     height: 52px;
   }
 
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+
   &__mobile {
     @media (min-width: $tablet-width) {
       display: none;

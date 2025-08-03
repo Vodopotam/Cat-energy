@@ -1,26 +1,37 @@
 .social {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+
   &__list {
-    margin: 0;
-    padding: 14px 0;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 19px 0;
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    gap: 33px;
 
     @media (min-width: $tablet-width) {
-      // padding: 10px 0;
-      border: none;
+      padding: 12px 0;
+      gap: 25px;
     }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__link {
     display: flex;
     align-items: center;
     position: relative;
-    width: 33px;
-    height: 33px;
     color: #666;
 
     &:hover {
@@ -32,44 +43,38 @@
 
       color: $color-basic;
     }
-
-    @media (min-width: $tablet-width) {
-      transform: scale(1.4);
-    }
-
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translate(-50%, -50%);
-    //   background-color: #666666;
-    // }
-
-    // &--vk::before {
-    //   width: 20px;
-    //   height: 12.36px;
-    //   mask-image: url('../../icons/vk.svg');
-    // }
-
-    // &--instagram::before {
-    //   width: 16px;
-    //   height: 16px;
-    //   mask-image: url('../../icons/instagram.svg');
-    // }
-
-    // &--facebook::before {
-    //   width: 9.5px;
-    //   height: 18px;
-    //   mask-image: url('../../icons/facebook.svg');
-    // }
   }
 
   &__icon {
     color: inherit;
 
-    // &:hover {
-    //   color: $color-basic;
-    // }
+    &--vk {
+      width: 23px;
+      height: 16px;
+      @media (min-width: $tablet-width) {
+        width: 30px;
+        height: 22px;
+      }
+    }
+
+    &--instagram {
+      width: 16px;
+      height: 16px;
+
+      @media (min-width: $tablet-width) {
+        width: 23px;
+        height: 23px;
+      }
+    }
+
+    &--facebook {
+      width: 22px;
+      height: 22px;
+
+      @media (min-width: $tablet-width) {
+        width: 25px;
+        height: 30px;
+      }
+    }
   }
 }

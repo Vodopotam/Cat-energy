@@ -43,6 +43,7 @@
     @media (min-width: $desktop-width) {
       display: grid;
       grid-template-columns: auto 245px;
+      align-items: start;
       gap: 75px 79px;
     }
   }

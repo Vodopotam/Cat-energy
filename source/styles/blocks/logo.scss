@@ -1,6 +1,4 @@
 .logo {
-  // width: 100px;
-  // height: 100px;
   @media (min-width: $tablet-width) {
     width: 175px;
     height: 52px;
@@ -8,47 +6,13 @@
 
   @media (min-width: $desktop-width) {
     width: 202px;
-    height: 59px;
-  }
-
-  &__mobile {
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-
-  &__tablet {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: block;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
-  }
-
-  &__desktop {
-    display: none;
-
-    @media (min-width: $desktop-width) {
-      display: block;
-    }
-  }
-  &__img {
-    @media (min-width: $tablet-width) {
-      margin-right: 12px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 202px;
-      height: 59px;
-      margin-right: 14px;
-    }
+    height: 60px;
   }
 
   &__text {
+    display: block;
+    width: 101px;
+    height: 18px;
     &--header {
       @media (min-width: $tablet-width) {
         display: none;

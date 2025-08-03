@@ -3,10 +3,12 @@
 
   @media (min-width: $tablet-width) {
     border: none;
+    padding-top: 62px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 187px;
+    // padding-top: 187px;
+    padding-top: 75px;
   }
 
   &__header {
